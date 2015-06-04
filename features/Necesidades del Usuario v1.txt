@@ -1,4 +1,4 @@
-* Login cliente: el cliente se identifica en el sistema para ver las novedades de sus casos (o proyectos).
+X * Login cliente: el cliente se identifica en el sistema para ver las novedades de sus casos (o proyectos).
 * Un cliente tiene varios casos (aunque generalmente sea 1 o 2), cada caso/proyecto tiene un listado novedades ordenadas cronológicamente.
 * Una novedad tiene un texto breve y puede tener un archivo adjunto (imagen, pdf o word).
 ** Opcional: en el caso de las imágenes procesarlas para que ocupen menos espacio en el servidor.
@@ -17,14 +17,18 @@ Funcionalidades detectadas:
 - Admin. Novedades. CRUD.
 - Agregar Opción de Novedades al menú al Admin.
 
-- Login cliente.
+X - Login cliente.
 	-- Wiget para sitio web.
-	-- Ve un mensaje cuando esta deshabilitado: "Su usuario ha sido deshabilitado, por favor comuniquese con Cosme Fulanito (mail@mail)."
-- Clientes. Listado Casos.
-	-- Indicando cuales tienen novedades.
-- Clientes. Listado Novedades.
-	-- Ordenadas de la más reciente a la más antigua.
+X	-- Ve un mensaje cuando esta deshabilitado: "Su usuario ha sido deshabilitado, por favor comuniquese con X Cosme Fulanito (mail@mail)."
+X- Clientes. Listado Casos.
+X	-- Indicando cuales tienen novedades.
+X- Clientes. Listado Novedades.
+X	-- Ordenadas de la más reciente a la más antigua.
+
 - Clientes. Ver Novedad.
 	-- Veo el titulo, el texto completo y las imagenes (si las tiene).
-	-- Clientes. Descargar adjunto.
+	-- Veo el titulo, el texto completo y un link para descarjar el PDF adjunto.
+	-- Veo el titulo, el texto completo y un link para descarjar el .docx adjunto.
+	-- Descargar el adjunto de la novedad.
+
 
