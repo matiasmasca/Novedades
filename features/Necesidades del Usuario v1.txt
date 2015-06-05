@@ -17,8 +17,10 @@ Funcionalidades detectadas:
 - Admin. Novedades. CRUD.
 - Agregar Opción de Novedades al menú al Admin.
 
+
 X - Login cliente.
 	-- Wiget para sitio web.
+	-- mail y contraseña.
 X	-- Ve un mensaje cuando esta deshabilitado: "Su usuario ha sido deshabilitado, por favor comuniquese con X Cosme Fulanito (mail@mail)."
 X- Clientes. Listado Casos.
 X	-- Indicando cuales tienen novedades.
@@ -31,4 +33,7 @@ X	-- Ordenadas de la más reciente a la más antigua.
 	-- Veo el titulo, el texto completo y un link para descarjar el .docx adjunto.
 	-- Descargar el adjunto de la novedad.
 
-
+IceBox:
+- Ver que novedades se leyeron y cuales no.
+- Mandar mail al cliente cuando se publica una novedad.
+- 
