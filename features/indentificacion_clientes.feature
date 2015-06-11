@@ -6,9 +6,9 @@ Característica: Indentificacion clientes
 
 Escenario: cliente todo bien.
     Dado que soy cliente registrado
-    Y me identifico como "pepeargento@cliente.com"
-    Entonces veo un mensaje "Bienvenido Pepe Argento - Cliente."
+    Y me identifico como "don@deroche.com"
+    Entonces veo un mensaje "Bienvenido DeRoche - Cliente."
 
 Escenario: cliente usuario deshabilitado.
     Dado que el usuario esta "deshabilitado"
-    Entonces veo un mensaje que dice "Su usuario ha sido deshabilitado, por favor comuniquese con Cosme Fulanito (mail@mail.com)"
+    Entonces veo un mensaje que dice "Su usuario ha sido deshabilitado, por favor comuniquese con el Dr. Cosme Fulanito (mail@mail.com)"

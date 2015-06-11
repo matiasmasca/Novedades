@@ -4,11 +4,11 @@ X * Login cliente: el cliente se identifica en el sistema para ver las novedades
 ** Opcional: en el caso de las imágenes procesarlas para que ocupen menos espacio en el servidor.
 
 * El Administrador se identifica:
-- El Admin puede seleccionar un cliente, luego selecciona un caso y puede agregar una novedad para ese caso. 
+- El Admin puede seleccionar un cliente, luego selecciona un caso y puede agregar una novedad para ese caso.
 - Para una novedad, el Admin. puede agregar "Archivos Adjuntos" como imagenes, pdf o .docx
 - El Admin puede habilitar o deshabilitar un cliente.
-- 
- 
+-
+
 
 Funcionalidades detectadas:
 - Admin. Clientes. CRUD.
@@ -27,13 +27,13 @@ X	-- Indicando cuales tienen novedades.
 X- Clientes. Listado Novedades.
 X	-- Ordenadas de la más reciente a la más antigua.
 
-- Clientes. Ver Novedad.
-	-- Veo el titulo, el texto completo y las imagenes (si las tiene).
-	-- Veo el titulo, el texto completo y un link para descarjar el PDF adjunto.
-	-- Veo el titulo, el texto completo y un link para descarjar el .docx adjunto.
-	-- Descargar el adjunto de la novedad.
+X- Clientes. Ver Novedad.
+X	-- Veo el titulo, el texto completo y las imagenes (si las tiene).
+X	-- Veo el titulo, el texto completo y un link para descarjar el PDF adjunto.
+X	-- Veo el titulo, el texto completo y un link para descarjar el .docx adjunto.
+X	-- Descargar el adjunto de la novedad.
 
 IceBox:
 - Ver que novedades se leyeron y cuales no.
 - Mandar mail al cliente cuando se publica una novedad.
-- 
+- Comentar una novedad, dar respuesta a un comentario sobre novedad. Hilo conversación.
