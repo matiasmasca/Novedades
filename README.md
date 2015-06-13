@@ -30,7 +30,7 @@ Covertura de código con pruebas, según Coveralls.io
     [![Coverage Status](https://coveralls.io/repos/matiasmasca/Novedades/badge.svg)](https://coveralls.io/r/matiasmasca/Novedades)
 
 Integración Continua: con Travis-ci.org
-    [![Build Status](https://travis-ci.org/matiasmasca/novedades.svg?branch=master)](https://travis-ci.org/matiasmasca/novedades)
+	[![Build Status](https://travis-ci.org/matiasmasca/Novedades.svg?branch=master)](https://travis-ci.org/matiasmasca/Novedades)
 
 Dependency Status:
     [![Dependency Status](https://gemnasium.com/matiasmasca/Novedades.svg)](https://gemnasium.com/matiasmasca/Novedades)

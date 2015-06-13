@@ -10,7 +10,7 @@ env:
 bundler_args: --without production
 script:
   - RAILS_ENV=test
-  - bundle exec rake db:migrate --trace
+  - BUNDLE_GEMFILE="novedades_ror/Gemfile" bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec
   - bundle exec rake cucumber
