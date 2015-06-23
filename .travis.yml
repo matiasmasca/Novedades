@@ -19,7 +19,7 @@ deploy:
   provider: heroku
 #  buildpack: ruby
   api_key:
-    secure: M+tLL8qNPShe6y80hXAf9dDE5YQXpWWdpXZZiWAUktppL0QFyqZM7jpyf8zzVTDRKRhTO8g7ToYvszgsUF1L1qJef1UicVuyEuKXXGhOU2peD2zYh2eo+ns/k0Yo8PiP3zrkWIt9qK72dnRFQ9YUwSuSoGmErRyHLnmyovdcI0k=
+    secure: SECURE
   app: novedades-terciar
   on:
     repo: matiasmasca/Novedades
