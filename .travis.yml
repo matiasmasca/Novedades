@@ -14,7 +14,6 @@ script:
 #  - bundle exec rake cucumber
 
 #Deploy en Heroku
-#Esto es un mix de lo que genero Travis, con otras opciones.
 deploy:
   provider: heroku
 #  buildpack: ruby
@@ -23,7 +22,7 @@ deploy:
   app: novedades-terciar
   on:
     repo: matiasmasca/Novedades
-    #all_branches: true #Para que haga deploy ante cualquier rama, sino solo cuando cambia la master.
+    all_branches: true #Para que haga deploy ante cualquier rama, sino solo cuando cambia la master.
 
   run:
     - "rake db:drop"
