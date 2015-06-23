@@ -21,7 +21,7 @@ deploy:
     secure: M+tLL8qNPShe6y80hXAf9dDE5YQXpWWdpXZZiWAUktppL0QFyqZM7jpyf8zzVTDRKRhTO8g7ToYvszgsUF1L1qJef1UicVuyEuKXXGhOU2peD2zYh2eo+ns/k0Yo8PiP3zrkWIt9qK72dnRFQ9YUwSuSoGmErRyHLnmyovdcI0k=
   app: novedades-terciar
   on:
-    repo: matiasmasca/novedades/novedades_ror
+    repo: matiasmasca/novedades
     #all_branches: true #Para que haga deploy ante cualquier rama, sino solo cuando cambia la master.
 
   run:
