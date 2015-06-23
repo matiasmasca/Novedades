@@ -1,7 +1,7 @@
 # .travis.yml
 language: ruby
 rvm:
-  - 1.9.3
+  - ruby-head
 #before_install:
 #  - bundle exec gem update
 #  - bundle exec update thread_safe
@@ -12,6 +12,7 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rspec
   - bundle exec rake cucumber
+
 #Deploy en Heroku
 #Esto es un mix de lo que genero Travis, con otras opciones.
 deploy:

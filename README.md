@@ -1,5 +1,3 @@
-- [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-
 ***Novedades***
 ===
 Repositorio para la edición comunitaria (software libre) de "Novedades", una aplicación web para mantener informados a sus clientes sobre las novedes que hay sobre sus casos/proyectos.
@@ -42,6 +40,9 @@ CodeReview - TODOs:
 
 Heroku App - Demo:
     [![Heroku](http://heroku-badge.herokuapp.com/?app=terciar-novedades)]
+
+Licencia:
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 **Notas Técnicas**
 ===========
@@ -104,7 +105,7 @@ Heroku App - Demo:
     4. Push to the branch (`git push origin my-new-feature`)
     5. Create new Pull Request
 
-    =======
+    e=======
 
     Copyright (c) 2015  Matias Mascazzini
 
