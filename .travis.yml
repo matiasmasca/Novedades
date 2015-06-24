@@ -13,3 +13,10 @@ deploy:
   app: terciar-novedades
   on:
     repo: matiasmasca/Novedades
+    #all_branches: true #Para que haga deploy ante cualquier rama, sino solo cuando cambia la master.
+
+  run:
+    - "rake db:drop"
+    - "rake db:schema:load --trace"
+    - "rake db:seed"
+    - restart
