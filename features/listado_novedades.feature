@@ -6,7 +6,7 @@ Característica: Listado de Novedades
 
 Antecedentes:
     Dado que estoy logueado como "Cliente"
-    Y que he seleccionado "Ver novedades" del caso 'DeRoche vs Pepe Argento'
+    Y que he seleccionado "Ver novedades" del caso "DeRoche vs Pepe Argento"
 
 Escenario: Veo listado de novedades.
     Dado que el caso tiene 2 novedades
