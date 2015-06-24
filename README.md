@@ -39,7 +39,8 @@ CodeReview - TODOs:
     [![PullReview stats](https://www.pullreview.com/github/matiasmasca/novedades/badges/master.svg?)](https://www.pullreview.com/github/matiasmasca/novedades/reviews/master)
 
 Heroku App - Demo:
-    [![Heroku](http://heroku-badge.herokuapp.com/?app=terciar-novedades)]
+    ![Heroku](http://heroku-badge.herokuapp.com/?app=terciar-novedades)
+- https://terciar-novedades.herokuapp.com/
 
 Licencia:
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
