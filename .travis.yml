@@ -1,52 +1,15 @@
-# .travis.yml
 language: ruby
 rvm:
-  - ruby-head
-#before_install:
-#  - bundle exec gem update
-#  - bundle exec update thread_safe
-bundler_args: --without production
+- ruby-head
+bundler_args: "--without production"
 script:
-  - RAILS_ENV=test
-  - bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-#  - bundle exec rspec
-#  - bundle exec rake cucumber
-
-#Deploy en Heroku
+- RAILS_ENV=test
+- bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
 deploy:
   provider: heroku
-#  buildpack: ruby
   api_key:
-    secure: SECURE="*"
+    secure: rj3+4HweLnrZ+cxWS7Xk0/bzTUeZT4x1P3OoUZWiB19Z+3nL/gK3ZiwEr3DD11Z3I8sEKc0wz7WmBKXKycgit+HQCejNZoGYKCIlxNwIzrNlWPWfrDqvgV5OuaeebjXLaVYs267S5UV1iXfoDtUwOd0Bs1gCmIJciG8ct4LdBx/7pD9fIHSAXsbUtD0H9GrFUrMtu3SfVNCY/q3uB/9cZokjJfRTAA1kl5Pn3Q5KuKuMl5u4u+R5KQaRpxa7ivouto6MN22QcR6N/uZxbTVjCQ2W58YGBHZiGFP9YzlyofQ38gle/DQSVJnGiNFzd1lnmO5jT9x+u1ReB2Vo43eW3Fi88MTe7MaNE5yNZIiHZzWYkz2JjEHYffULYJIotyre/kjumZj0zMSGUR3pnZh7a3KGnZKNhigXGJz4dQJOxN7pv3DnjahpfcV4DeYqBEveBqCdyMsQZc8JCMTH8vKoEIsz7xV7yibZ6pa8B0HjGwI7XoA3RTymlth2mShTfdSGMOHMtoHeGwAoIcU0u1usu1eDIPCwNqSBDONKRP7w3iUEsj7XQCizBUu7srGrPiiZ25Hm8+e5e0BGUJcgUfr1xHitGhQULd2inPgxrsM3MWFqj+NZPKWdP9M+YYKBtbeJBW1YmbSB38RxFHb3v6CY4NrpqsG8/4t7fwOb8vKNLX4=
+  app: Novedades
   on:
     repo: matiasmasca/Novedades
-    all_branches: true #Para que haga deploy ante cualquier rama, sino solo cuando cambia la master.
-
-  run:
-    - "rake db:drop"
-    - "rake db:schema:load --trace"
-    - "rake db:seed"
-    - restart
-
-#db:schema:load #creates tables and columns within the (existing) database following schema.rb
-#db:setup #does db:create, db:schema:load, db:seed
-
-#after_script:
-#  # Install the Heroku gem (or the Heroku toolbelt)
-#  - gem install heroku
-#  # Add your Heroku git repo:
-#  - git remote add heroku git@heroku.com:YOUR_HEROKU_APP.git
-#  # Add your Heroku API key:
-#  - export HEROKU_API_KEY=YOUR_HEROKU_API_KEY_HERE
-#  # Turn off warnings about SSH keys:
-#  - echo "Host heroku.com" >> ~/.ssh/config
-#  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-#  - echo "   CheckHostIP no" >> ~/.ssh/config
-#  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-#  # Clear your current Heroku SSH keys:
-#  - heroku keys:clear
-#  # Add a new SSH key to Heroku
-#  - yes | heroku keys:add
-#  # Push to Heroku!
-#  - yes | git push heroku master
