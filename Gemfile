@@ -30,6 +30,27 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#gem 'devise' #Para registración y autenticación de usuarios.
+
+group :development do
+#  gem "better_errors" #Personaliza los mensajes de error de Rails.
+#  gem "binding_of_caller" #Muestra valores de variables de BetterErrors
+end
+
+group :test do
+#  gem 'cucumber-rails' , require: false
+#  gem 'database_cleaner' # to clear Cucumber's test database between runs
+#  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions. web_steps.rb
+#  gem 'capybara'         # lets Cucumber pretend to be a web browser
+#  gem 'launchy'          # a useful debugging aid for user stories
+#  gem 'rspec-rails'
+#  gem 'rspec-expectations' # Para usar rspec en cucumber y que entienda .should
+#  gem 'shoulda-matchers' #para rspec use should extras como has_many
+end
+
+# Servicio de covertura de test y estadisticas.
+# gem 'coveralls', require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -42,6 +63,10 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner' # to clear Cucumber's test database between runs
 end
 
 group :production do
