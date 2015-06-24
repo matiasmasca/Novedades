@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
@@ -46,8 +45,7 @@ group :development, :test do
 end
 
 group :production do
-  #heroku pide esto.
-  #ruby '1.9.3'
+
   gem 'pg' #base de datos
   gem 'rails_12factor' #algo de heroku para archivos estaticos.
 end
