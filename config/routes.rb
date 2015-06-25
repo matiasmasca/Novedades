@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  #paginas estaticas
+  get 'pages/index'
+  get 'pages/home'
+  get 'pages/about'
+  get 'pages/contact'
+
+  unauthenticated do
+    get 'pages/home'
+    get 'pages/about'
+    get 'pages/contact'
+  end
+
+  authenticated do
+    get 'pages/dashboard' => 'pages#dashboard'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root to: "pages#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

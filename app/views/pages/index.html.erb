@@ -1,0 +1,22 @@
+<h1>Bienvenido a Novedades</h1>
+
+
+<h2> Zona Clientes </h2>
+<!--/Login -->
+<% if user_signed_in? %>
+  <ul class="navbar-text navbar-right">
+  <li class="active" title="Estas identificado como: <%= current_user.email %>">Identificado: <strong><%= current_user.email %></strong>.</li>
+  <li><%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+<% else %>
+  <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
+          <div class="form-group">
+            <%= f.text_field :email, :placeholder => "su@email", class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password, :placeholder => "Password", class: "form-control"  %>
+          </div>
+          <%= f.submit 'Ingresar', class: "btn btn-success" %>
+  <% end %>
+<% end %>
+<!--/login -->

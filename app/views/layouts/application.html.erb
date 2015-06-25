@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NovedadesRor</title>
+  <title>Novedades</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,6 +9,23 @@
 <body>
 
 <%= yield %>
+
+<!-- Pie -->
+<hr>
+  <footer class="bottom">
+    <div class="container hidden-xs">
+     <ul class="nav navbar-nav pull-left">
+       <li><a href="https://github.com/matiasmasca/novedades">Powered by Novedades - 2015</a></li>
+       <li><%= link_to 'Acerca de',  pages_about_path %></li>
+       <li><%= link_to 'Contacto',  pages_contact_path %></li>
+     </ul>
+   </div>
+
+   <div class="container visible-xs">
+     <p class="navbar-text pull-left">Powered by Novedades - 2015</p>
+     <a href="https://github.com/matiasmasca/novedades" class="navbar-btn btn-info btn pull-right">Novedades</a>
+   </div>
+ </footer>
 
 </body>
 </html>

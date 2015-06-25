@@ -1,5 +1,5 @@
+# encoding: utf-8
 #Archivo temporal para probar el deploy en Travis que esta fallando por el pending de cucumber.
-
 Dado(/^que estoy logueado como "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
@@ -120,3 +120,8 @@ end
 Entonces(/^veo los archivos descargados$/) do
   pending # express the regexp above with the code you wish you had
 end
+
+#Pa los mensajes de error.
+#Then /^I should see an error message containing "([^\"]*)"$/ do |message|
+#    page.should have_selector('#flash_alert', text: message)
+#end

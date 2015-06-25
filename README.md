@@ -30,7 +30,7 @@ Covertura de código con pruebas, según Coveralls.io
     [![Coverage Status](https://coveralls.io/repos/matiasmasca/Novedades/badge.svg)](https://coveralls.io/r/matiasmasca/Novedades)
 
 Integración Continua: con Travis-ci.org
-	[![Build Status](https://travis-ci.org/matiasmasca/Novedades.svg?branch=master)](https://travis-ci.org/matiasmasca/Novedades)
+[![Build Status](https://travis-ci.org/matiasmasca/Novedades.svg?branch=master)](https://travis-ci.org/matiasmasca/Novedades)
 
 Dependency Status:
     [![Dependency Status](https://gemnasium.com/matiasmasca/Novedades.svg)](https://gemnasium.com/matiasmasca/Novedades)
@@ -110,7 +110,7 @@ Licencia:
 
     Copyright (c) 2015  Matias Mascazzini
 
-    MIT License
+    MIT License [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
