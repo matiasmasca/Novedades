@@ -1,18 +1,18 @@
 # encoding: utf-8
 #Archivo temporal para probar el deploy en Travis que esta fallando por el pending de cucumber.
-Dado(/^que estoy logueado como "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Dado(/^estoy en la pantalla donde veo "(.*?)"$/) do |pantalla|
+  case pantalla
+  when 'Mis casos'
+    visit('/clientes/index')
+  when 'las novedades'
+    visit('/novedades')
+  else
+    visit('/¿A donde queres ir?')
+  end
+
 end
 
-Dado(/^que estoy identificado como "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^estoy en la pantalla donde veo "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^que tengo (\d+) casos$/) do |arg1, table|
+Dado(/^que tengo (\d+) casos$/) do |cantidad_casos, table|
   # table is a Cucumber::Ast::Table
   pending # express the regexp above with the code you wish you had
 end

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/contact'
 
+  get 'clientes/index' => 'clientes#casos'
+
   unauthenticated do
     get 'pages/home'
     get 'pages/about'

@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Novedades</title>
+  <title>Novedades App.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <main>
+  <!-- Navegacion -->
+  <nav>
+      <header>
+        Menu de Navegación
+      </header>
+      <ul>
+         <li><span>Novedades</span></li>
+         <li><%= link_to 'Inicio',  pages_index_path %></li>
+         <li><%= link_to 'Home',  pages_home_path %></li>
+      </ul>
+  </nav>
+  <!-- //Navegacion -->
 
 <%= yield %>
 
@@ -15,17 +28,17 @@
   <footer class="bottom">
     <div class="container hidden-xs">
      <ul class="nav navbar-nav pull-left">
-       <li><a href="https://github.com/matiasmasca/novedades">Powered by Novedades - 2015</a></li>
+       <li><a href="https://github.com/matiasmasca/novedades">Powered by Novedades - <time datetime="2015-06-01">2015</time></a></li>
        <li><%= link_to 'Acerca de',  pages_about_path %></li>
        <li><%= link_to 'Contacto',  pages_contact_path %></li>
      </ul>
    </div>
 
    <div class="container visible-xs">
-     <p class="navbar-text pull-left">Powered by Novedades - 2015</p>
+     <p class="navbar-text pull-left">Powered by Novedades - <time datetime="2015-06-01">2015</time></p>
      <a href="https://github.com/matiasmasca/novedades" class="navbar-btn btn-info btn pull-right">Novedades</a>
    </div>
  </footer>
-
+ </main> 
 </body>
 </html>
