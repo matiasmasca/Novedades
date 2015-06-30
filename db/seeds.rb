@@ -22,3 +22,15 @@ users = [{:nombre => 'DeRoche',:email => 'don@deroche.com',:password => "clave12
 users.each do |user|
    User.create!(user)
 end
+
+projects = [{:name => 'DeRoche vs Ramon',:customer_id => '1'},
+         {:name => 'DeRoche vs Gregorio',:customer_id => '1'},
+         {:name => 'DeRoche vs Micaëla',:customer_id => '1'},
+         {:name => 'DeRoche vs Codito',:customer_id => '1'},
+         {:name => 'DeRoche vs Su Mujer',:customer_id => '1'}
+
+  	 ]
+
+projects.each do |project|
+   Project.create!(project)
+end

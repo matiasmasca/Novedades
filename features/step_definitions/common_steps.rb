@@ -3,7 +3,7 @@
 Dado(/^estoy en la pantalla donde veo "(.*?)"$/) do |pantalla|
   case pantalla
   when 'Mis casos'
-    visit('/customers/index')
+    visit('/projects')
   when 'las novedades'
     visit('/novedades')
   else
@@ -15,7 +15,7 @@ end
 Dado(/^estoy en la pantalla "(.*?)"$/) do |pantalla|
   case pantalla
   when 'Mis casos'
-    visit('/customers/index')
+    visit('/projects')
   when 'las novedades'
     visit('/novedades')
   else

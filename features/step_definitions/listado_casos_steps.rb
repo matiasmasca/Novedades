@@ -8,14 +8,15 @@ end
 
 Dado(/^que tengo (\d+) casos$/) do |cantidad_casos, table|
   # table is a Cucumber::Ast::Table
+  # Cantidad de Casos, no se usa en esta prueba, es un dato simbolico. Lo que importa es la tabla.
   @proyects = Project.create!(table.hashes)
   #save_and_open_page
 end
 
-Entonces(/^veo un listado con (\d+) casos$/) do |count|
+Entonces(/^veo un listado con (\d+) casos$/) do |cantidad_casos|
   #save_and_open_page
-  page.has_table?('projects-list')
-  page.assert_selector('table tr', :count => count )
+  page.has_table?('projects-list') #Que este la tabla
+  page.assert_selector('table tbody tr', :count => cantidad_casos ) #Que tenga X filas. OJO esto puede fallar con filas vacias.
 end
 
 Dado(/^que no tengo casos$/) do|table|

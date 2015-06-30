@@ -4,7 +4,11 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    if current_user.tipo == 2 #Un cliente
+      @projects = Project.where(customer_id: current_user.id)
+    else
+      @projects = Project.all
+    end
   end
 
   # GET /projects/1

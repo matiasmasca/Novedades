@@ -2,11 +2,12 @@
 
 <h1>Listing Projects</h1>
 
-<table>
+<table  id="projects-list">
   <thead>
     <tr>
       <th>Name</th>
       <th>Customer</th>
+      <th>Novedades</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%= project.customer %></td>
+        <td><%= project.customer_id %></td>
+        <td><%= "novedades" %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Nuevo caso', new_project_path %>
