@@ -3,27 +3,27 @@
 Dado(/^estoy en la pantalla donde veo "(.*?)"$/) do |pantalla|
   case pantalla
   when 'Mis casos'
-    visit('/clientes/index')
+    visit('/customers/index')
   when 'las novedades'
     visit('/novedades')
   else
     visit('/¿A donde queres ir?')
   end
-
 end
 
-Dado(/^que tengo (\d+) casos$/) do |cantidad_casos, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+#TODO: manioso! DRY!!!
+Dado(/^estoy en la pantalla "(.*?)"$/) do |pantalla|
+  case pantalla
+  when 'Mis casos'
+    visit('/customers/index')
+  when 'las novedades'
+    visit('/novedades')
+  else
+    visit('/¿A donde queres ir?')
+  end
 end
 
-Dado(/^estoy en la pantalla "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
 
-Entonces(/^veo un listado con (\d+) casos$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
 
 Dado(/^que este caso tiene (\d+) novedades$/) do |arg1, table|
   # table is a Cucumber::Ast::Table
@@ -52,8 +52,8 @@ Dado(/^que estoy en la pantalla de "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
 
-Entonces(/^veo un listado con las (\d+) novedades$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Entonces(/^veo un listado con las (\d+) novedades$/) do |count|
+  page.should have_selector("table#selection-processes-list>tbody:nth-child(2)>tr:eq(#{count})")
 end
 
 Entonces(/^veo un listado ordenado cronologicamente$/) do

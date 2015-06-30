@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   devise_for :users
 
   #paginas estaticas
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/contact'
 
-  get 'clientes/index' => 'clientes#casos'
+  get 'customers/index'
 
   unauthenticated do
     get 'pages/home'

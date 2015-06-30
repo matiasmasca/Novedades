@@ -10,26 +10,26 @@ Antecedentes:
 
 #Camino feliz.
 Escenario: tiene 2 casos.
-    Y que tengo 2 casos
-    | nombre_caso          | cliente_id |
-    | DeRoche vs Argento   | 1          |
-    | DeRoche vs Menganito | 1          |
+    Dado que tengo 2 casos
+    | name                 | customer_id  |
+    | DeRoche vs Argento   | 1            |
+    | DeRoche vs Menganito | 1            |
     Y estoy en la pantalla "Mis casos"
     Entonces veo un listado con 2 casos
 
 Escenario: cliente tiene 1 caso con 2 novedades.
-    Y que tengo 1 casos
-    | nombre_caso         | cliente_id | caso_id | novedades |
-    | DeRoche vs Argento  | 1          | 1       | 2         |
+    Dado que tengo 1 casos
+    | name                | customer_id |
+    | DeRoche vs Argento  | 1           |
     Y estoy en la pantalla "Mis casos"
     Y que este caso tiene 2 novedades
-    | titulo                        | description                                                                                               | adjunto  | caso_id | fecha      |
-    | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               |          | 1       | 03/06/2015 |
-    | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 |          | 1       | 05/06/2015 |
+    | titulo                        | description                                                                                               | adjunto  | Project_id | fecha      |
+    | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               |          | 1          | 03/06/2015 |
+    | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 |          | 1          | 05/06/2015 |
     Entonces veo una etiqueta de colores que identifica que el caso tiene 2 novedades
 
 Escenario: cliente no tiene casos.
-    Y que tengo 0 casos
-    Y estoy en la pantalla "Mis casos"
-    | nombre_caso | cliente_id |
-    Entonces veo un listado vacio.
+    Dado que no tengo casos
+    | name                 | customer_id  |
+    |                      |              |
+    Entonces veo un listado vacios.
