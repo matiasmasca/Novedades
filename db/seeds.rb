@@ -34,3 +34,14 @@ projects = [{:name => 'DeRoche vs Ramon',:customer_id => '1'},
 projects.each do |project|
    Project.create!(project)
 end
+
+news = [{:project_id => '1', :title => 'DeRoche vs Ramon',:date =>'3-05-2015', message: 'se presento tal cosa'},
+         {:project_id => '1', :title => 'DeRoche vs Ramon',:date =>'10-05-2015', message: 'se presento tal otra'},
+         {:project_id => '1', :title => 'DeRoche vs Ramon',:date =>'20-05-2015', message: 'se presento tal otra otra'},
+         {:project_id => '1', :title => 'DeRoche vs Ramon',:date =>'30-05-2015', message: 'se presento tal otra otra otra'},
+         {:project_id => '1', :title => 'DeRoche vs Ramon',:date =>'10-06-2015', message: 'El juez resolvio tal y cual cosa'}
+  	 ]
+
+news.each do |new|
+   New.create!(new)
+end

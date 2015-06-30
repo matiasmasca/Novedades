@@ -23,9 +23,9 @@ Escenario: cliente tiene 1 caso con 2 novedades.
     | DeRoche vs Argento  | 1           |
     Y estoy en la pantalla "Mis casos"
     Y que este caso tiene 2 novedades
-    | titulo                        | description                                                                                               | adjunto  | Project_id | fecha      |
-    | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               |          | 1          | 03/06/2015 |
-    | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 |          | 1          | 05/06/2015 |
+    | title                         | message                                                                                                   |  project_id | date       |
+    | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               | 1           | 03/06/2015 |
+    | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 1           | 05/06/2015 |
     Entonces veo una etiqueta de colores que identifica que el caso tiene 2 novedades
 
 Escenario: cliente no tiene casos.

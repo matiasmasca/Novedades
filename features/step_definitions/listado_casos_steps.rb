@@ -8,8 +8,8 @@ end
 
 Dado(/^que tengo (\d+) casos$/) do |cantidad_casos, table|
   # table is a Cucumber::Ast::Table
-  # Cantidad de Casos, no se usa en esta prueba, es un dato simbolico. Lo que importa es la tabla.
   @proyects = Project.create!(table.hashes)
+  assert_equal cantidad_casos.to_i, @proyects.count
   #save_and_open_page
 end
 
@@ -25,5 +25,6 @@ Dado(/^que no tengo casos$/) do|table|
 end
 
 Entonces(/^veo un listado vacios\.$/) do
-  pending # express the regexp above with the code you wish you had
+  page.has_table?('projects-list') #Que este la tabla
+  page.assert_selector('table tbody tr', :count => 0 )
 end

@@ -17,7 +17,7 @@
       <tr>
         <td><%= project.name %></td>
         <td><%= project.customer_id %></td>
-        <td><%= "novedades" %></td>
+        <td><span class="badge pull-right alert-warning"><%= project.news %></span></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

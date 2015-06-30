@@ -23,21 +23,6 @@ Dado(/^estoy en la pantalla "(.*?)"$/) do |pantalla|
   end
 end
 
-
-
-Dado(/^que este caso tiene (\d+) novedades$/) do |arg1, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo una etiqueta de colores que identifica que el caso tiene (\d+) novedades$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo un listado vacio\.$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 #De Ver novedades.
 Dado(/^que he seleccionado "(.*?)" del caso "(.*?)"$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
