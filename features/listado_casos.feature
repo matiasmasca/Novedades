@@ -18,7 +18,7 @@ Escenario: tiene 2 casos.
     Entonces veo un listado con 2 casos
 
 Escenario: cliente tiene 1 caso con 2 novedades.
-    Dado que tengo 1 casos
+    Dado que tengo 1 caso
     | name                | customer_id |
     | DeRoche vs Argento  | 1           |
     Y estoy en la pantalla "Mis casos"
@@ -27,6 +27,17 @@ Escenario: cliente tiene 1 caso con 2 novedades.
     | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               | 1           | 03/06/2015 |
     | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 1           | 05/06/2015 |
     Entonces veo una etiqueta de colores que identifica que el caso tiene 2 novedades
+
+Escenario: ver novedades
+    Dado que tengo 1 caso
+    | name                | customer_id |
+    | DeRoche vs Argento  | 1           |
+    Y estoy en la pantalla "Mis casos"
+    Y que este caso tiene 1 novedad
+    | title                         | message                                                                                                   |  project_id | date       |
+    | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               | 1           | 03/06/2015 |
+    Y seleccionó "Ver novedades"
+    Entonces veo un listado con las novedades
 
 Escenario: cliente no tiene casos.
     Dado que no tengo casos

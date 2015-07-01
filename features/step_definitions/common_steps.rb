@@ -1,18 +1,6 @@
 # encoding: utf-8
-#Archivo temporal para probar el deploy en Travis que esta fallando por el pending de cucumber.
-Dado(/^estoy en la pantalla donde veo "(.*?)"$/) do |pantalla|
-  case pantalla
-  when 'Mis casos'
-    visit('/projects')
-  when 'las novedades'
-    visit('/novedades')
-  else
-    visit('/¿A donde queres ir?')
-  end
-end
-
-#TODO: manioso! DRY!!!
-Dado(/^estoy en la pantalla "(.*?)"$/) do |pantalla|
+# # save_and_open_page
+Dado(/^(?:estoy en la pantalla|estoy en la pantalla donde veo|que estoy en la pantalla de)? "(.*?)"$/) do |pantalla|
   case pantalla
   when 'Mis casos'
     visit('/projects')
@@ -24,22 +12,26 @@ Dado(/^estoy en la pantalla "(.*?)"$/) do |pantalla|
 end
 
 #De Ver novedades.
-Dado(/^que he seleccionado "(.*?)" del caso "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+Dado(/^que tengo un caso llamado "(.*?)"$/) do |nombre_caso|
+  @project = Project.create!({
+  :name => nombre_caso,
+  :customer_id => 1
+  })
 end
 
-Dado(/^que el caso tiene (\d+) novedades$/) do |arg1, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+Dado(/^seleccionó "(.*?)"$/) do |opcion|
+  if opcion == "Ver novedades"
+    click_on("Ver novedades")
+  end
 end
 
-Dado(/^que estoy en la pantalla de "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Entonces(/^veo un listado con las novedades$/) do
+  page.has_table?('news-list') #Que este la tabla
+  news = page.all('table#news-list tr').count
+  assert news > 0
 end
 
-Entonces(/^veo un listado con las (\d+) novedades$/) do |count|
-  page.should have_selector("table#selection-processes-list>tbody:nth-child(2)>tr:eq(#{count})")
-end
+
 
 Entonces(/^veo un listado ordenado cronologicamente$/) do
   pending # express the regexp above with the code you wish you had

@@ -1,12 +1,5 @@
 # encoding: utf-8
-Dado(/^que estoy identificado como "(.*?)"$/) do |tipo|
-  if tipo == "cliente"
-    step %{existe un Usuario: "DeRoche", "don@deroche.com", "clave12345" y "1"}
-    step %{completo mi email "don@deroche.com" y contraseña "clave12345"}
-  end
-end
-
-Dado(/^que tengo (\d+) casos$/) do |cantidad_casos, table|
+Dado(/^que tengo (\d+) (?:casos|caso)$/) do |cantidad_casos, table|
   # table is a Cucumber::Ast::Table
   @proyects = Project.create!(table.hashes)
   assert_equal cantidad_casos.to_i, @proyects.count
