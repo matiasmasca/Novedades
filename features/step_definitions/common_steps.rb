@@ -31,21 +31,6 @@ Entonces(/^veo un listado con las novedades$/) do
   assert news > 0
 end
 
-
-
-Entonces(/^veo un listado ordenado cronologicamente$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^que el caso no tiene novedades$/) do |table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo un listado vacio con los titulos$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 ## De VER novedades
 Dado(/^que he seleccionado el caso "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had

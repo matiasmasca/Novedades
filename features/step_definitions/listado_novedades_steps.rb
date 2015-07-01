@@ -29,3 +29,24 @@ Entonces(/^veo un listado con las (\d+) novedades$/) do |count|
   news = page.all('table#news-list tbody tr').count
   assert_equal count.to_i, news
 end
+
+Entonces(/^veo un listado ordenado cronologicamente$/) do |expected_table|
+  # table is a Cucumber::Ast::Table
+  rows = find("table#news-list").all('tr')
+  table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
+  puts table
+  #expected_table.diff!(table)
+  #TO-DO hacer que coincidan las tablas
+end
+
+Dado(/^que el caso no tiene novedades$/) do |table|
+  # table is a Cucumber::Ast::Table
+  @news = nil
+  visit('/news')
+end
+
+Entonces(/^veo el listado de novedades vacio$/) do
+  #save_and_open_page
+  page.has_table?('news-list') #Que este la tabla
+  page.assert_selector('table tbody tr', :count => 0 )
+end

@@ -38,12 +38,13 @@ group :development do
 end
 
 group :test do
-#  gem 'cucumber-rails' , require: false
-#  gem 'database_cleaner' # to clear Cucumber's test database between runs
 #  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions. web_steps.rb
 #  gem 'rspec-rails'
 #  gem 'rspec-expectations' # Para usar rspec en cucumber y que entienda .should
 #  gem 'shoulda-matchers' #para rspec use should extras como has_many
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended. to clear Cucumber's test database between runs
+  gem 'database_cleaner'
 end
 
 # Servicio de covertura de test y estadisticas.
@@ -68,11 +69,9 @@ group :development, :test do
 
   gem 'capybara'         # lets Cucumber pretend to be a web browser #Supuestamente viene con cucumber-rails
   gem 'launchy'          # Abre programas. Nos sirve para: save_and_open_page
-
 end
 
 group :production do
-
   gem 'pg' #base de datos
   gem 'rails_12factor' #algo de heroku para archivos estaticos.
 end
