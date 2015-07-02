@@ -4,7 +4,14 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-    @news = New.all.order('date DESC')
+
+    if current_user.tipo == 2 #Un cliente
+      project_id = @_request.filtered_parameters["format"].to_i
+      @news = New.where(project_id: project_id).order('date DESC')
+      #raise 'Oops'
+    else
+      @news = New.all.order('date DESC')
+    end
   end
 
   # GET /news/1
