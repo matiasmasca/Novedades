@@ -10,38 +10,31 @@ Antecedentes:
     | name                | customer_id |
     | DeRoche vs Argento  | 1           |
     Y estoy en la pantalla "Mis casos"
-    Y que este caso tiene 2 novedades
+    Y que este caso tiene 3 novedades
     | title                         | message                                                                                                   | project_id | date       |
-    | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 1          | 01/03/2014 |
-    | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               | 1          | 01/09/2014 |
+    | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 1          | 2015-03-01 |
+    | Reunion con Defensores        | nos encontramos en el café Marta DeSalvado                                                                | 1          | 2014-12-01 |
+    | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                               | 1          | 2015-07-01 |
     Y seleccionó "Ver novedades"
     Entonces veo un listado con las novedades
 
 Escenario: Veo listado de novedades.
-    Dado que el caso tiene 2 novedades
-     | title                        | message                                                                                                 | project_id | date     |
-     | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                                | 1       | 01/09/2014 |
-     | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015           | 1       | 01/03/2014 |
-    Entonces veo un listado con las 2 novedades
+    Dado que el caso tiene 3 novedades
+     | title                         | message                                                                                                   | project_id | date       |
+     | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               | 1          | 01/09/2014 |
+     | Reunion con Defensores        | nos encontramos en el café Marta DeSalvado                                                                | 1          | 2014-12-01 |
+     | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 1          | 01/03/2015 |
+    Entonces veo un listado con las 3 novedades
 
-@wip
 Escenario: Las novedades estan ordenadas de la más reciente a la más antigua
-    #Dado que el caso tiene 2 novedades
-    # | title                        | message                                                                                                    | date       |
-    # | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 2014-03-01 |
-    # | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                               | 2014-09-01 |
-    Entonces veo un listado ordenado cronologicamente
-     | Title                         | Message                                                                                                   | Date       | Ver más |
-     | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                               | 2014-09-01 | Ver más |
-     | Presentación recurso de amparo| El día de ayer se presento un recurso de amparo contra la resolución de la jueza Barubudia del 03/06/2015 | 2014-03-01 | Ver más |
+    Entonces debo ver "Resolución Juez Barubudia" antes que "Reunion con Defensores"
 
-@wip
 Escenario: caso sin novedades
     Dado que el caso no tiene novedades
      | title | message | adjunto | caso_id | fecha |
     Entonces veo el listado de novedades vacio
 
-@wip
+
 Escenario: novedades con adjuntos
   Dado que la novedad tiene 1 adjunto
     | adjunto   |news_id | project_id | date       |

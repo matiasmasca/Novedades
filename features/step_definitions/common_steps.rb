@@ -83,6 +83,12 @@ Entonces(/^veo los archivos descargados$/) do
   pending # express the regexp above with the code you wish you had
 end
 
+Entonces(/^mostrame la pagina$/) do
+  save_and_open_page
+end
+
+
+
 #Pa los mensajes de error.
 #Then /^I should see an error message containing "([^\"]*)"$/ do |message|
 #    page.should have_selector('#flash_alert', text: message)
