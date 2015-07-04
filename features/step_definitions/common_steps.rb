@@ -20,8 +20,13 @@ Dado(/^que tengo un caso llamado "(.*?)"$/) do |nombre_caso|
 end
 
 Dado(/^seleccionó "(.*?)"$/) do |opcion|
-  if opcion == "Ver novedades"
+  case opcion
+  when 'Ver novedades'
     click_on("Ver novedades")
+  when 'Ver más'
+    click_on("Ver más")
+  else
+    visit('/¿A donde queres ir?')
   end
 end
 
@@ -32,56 +37,6 @@ Entonces(/^veo un listado con las novedades$/) do
 end
 
 ## De VER novedades
-Dado(/^que he seleccionado el caso "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^que he seleccionado la novedad "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^que la novedad tiene (\d+) adjunto$/) do |arg1, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo el "(.*?)" y la "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo la imagen en la pantalla$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^deseo descargarlo$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^preciono el botón "(.*?)"$/) do |arg1, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo el archivo descargado$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Dado(/^deseo descargarlos$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^hay (\d+) botones para "(.*?)"$/) do |arg1, arg2, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^descargo los (\d+) archivos$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Entonces(/^veo los archivos descargados$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
 Entonces(/^mostrame la pagina$/) do
   save_and_open_page

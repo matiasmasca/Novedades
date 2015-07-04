@@ -58,7 +58,9 @@ Licencia:
     mirar el archivo gemfile
 
 * Configuration:
-    Nada especial por ahora.
+    Para poder embeber la aplicación en otro sitio web, tenes que cambiar, en  config/application.rb la linea y poner el dominio que admitis: 
+        config.action_dispatch.default_headers = { 'X-Frame-Options' => 'ALLOW-FROM http://DOMINIO.com/' }
+
 
 * Instalación para Dev:
     bundler install

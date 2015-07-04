@@ -34,7 +34,7 @@ Escenario: caso sin novedades
      | title | message | adjunto | caso_id | fecha |
     Entonces veo el listado de novedades vacio
 
-
+@wip
 Escenario: novedades con adjuntos
   Dado que la novedad tiene 1 adjunto
     | adjunto   |news_id | project_id | date       |

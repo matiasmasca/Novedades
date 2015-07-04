@@ -30,6 +30,6 @@ module NovedadesRor
     config.active_record.raise_in_transactional_callbacks = true
 
     # OJO con esto, ya que esta permitiendo que se usen iFrame.
-    config.action_dispatch.default_headers = { 'X-Frame-Options' => 'ALLOW-FROM http://miguelgoro.com.ar/' }
+    config.action_dispatch.default_headers = { 'X-Frame-Options' => 'ALLOW-FROM http://terciar.ga/' }
   end
 end
