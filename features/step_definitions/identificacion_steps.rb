@@ -25,11 +25,6 @@ Dado(/^que el usuario esta "(.*?)"$/) do |estado|
   step %{completo mi email "don@deroche.com" y contraseña "clave12345"}
 end
 
-Entonces(/^veo un mensaje "(.*?)"$/) do |mensaje|
-  #Capybara Quering, sin RSpec. Usa MiniTest.
-  assert page.has_content?(mensaje)
-end
-
 Entonces(/^veo un mensaje que dice "(.*?)"$/) do |mensaje|
  #Capybara Quering, sin RSpec.
  assert page.has_content?(mensaje)

@@ -9,19 +9,17 @@ Antecedentes:
     Y que he seleccionado el caso "DeRoche vs Pepe Argento"
     Y que he seleccionado la novedad "Resolución Juez Barubudia"
 
-@wip
-Escenario: veo el detalle de una novedad, sin adjuntos
-  Dado que la novedad tiene 0 adjunto
-  | titulo                        | detalle                                                                                               | adjunto  | caso_id | fecha      |
-  | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                               |          | 1       | 03/06/2015 |
-  Entonces veo el "titulo" y la "detalle"
+Escenario: veo el detalle de una novedad
+  Entonces veo el titulo "Resolución Juez Barubudia"
+  Y el mensaje "La jueza Barubudia dio resolución favorable"
+  Y la fecha "01/09/2014"
 
-@wip
 Escenario: veo detalle de novedad con imagenes
   Dado que la novedad tiene 1 adjunto
-  | titulo                        | detalle                                                                                               | adjunto  | caso_id | fecha      |
-  | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                               | res.jpeg | 1       | 03/06/2015 |
-  Entonces veo el "titulo" y la "detalle"
+  | adjunto   |news_id | project_id |
+  | reso.jpeg | 1      | 1          |
+  Entonces veo el titulo "Resolución Juez Barubudia" 
+  Y el mensaje "La jueza Barubudia dio resolución favorable"
   Y veo la imagen en la pantalla
 
 @wip
@@ -60,3 +58,6 @@ Escenario: la novedad tiene 2 archivos adjuntos
   | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                           | res.pdf, res.docx  | 1       | 03/06/2015 |
   Y descargo los 2 archivos
   Y veo los archivos descargados
+
+@wip
+Escenario: veo el detalle de una novedad, sin adjuntos

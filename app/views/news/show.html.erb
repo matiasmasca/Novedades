@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Project:</strong>
-  <%= @news.project %>
+  <strong>Caso:</strong>
+  <%= @news.project.name %>
 </p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Date:</strong>
+  <strong>Fecha:</strong>
   <%= @news.date %>
 </p>
 
 <p>
-  <strong>Message:</strong>
+  <strong>T&iacute;tulo:</strong>
+  <%= @news.title %>
+</p>
+
+
+
+<p>
+  <strong>Mensaje:</strong>
   <%= @news.message %>
 </p>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_path %>
+<%= link_to 'Atrás', news_path %>
+<p>
+Opciones del Admin.
+<%= link_to 'Edit', edit_news_path(@news) %>

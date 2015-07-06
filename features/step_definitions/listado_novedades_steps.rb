@@ -18,7 +18,6 @@ Dado(/^que he seleccionado "(.*?)" del caso "(.*?)"$/) do |accion, caso|
   if caso == "DeRoche vs Pepe Argento"
     step %{que tengo un caso llamado "#{caso}"}
   end
-  # save_and_open_page
 
   if accion == "Ver novedades"
     click_on("Ver novedades")
@@ -30,20 +29,10 @@ Entonces(/^veo un listado con las (\d+) novedades$/) do |count|
   assert_equal count.to_i, news
 end
 
-#Entonces(/^veo un listado ordenado cronologicamente$/) do |expected_table|
-  # table is a Cucumber::Ast::Table
-  #rows = find("table#news-list").all('tr')
-  #table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
-  #puts table
-  #expected_table.diff!(table)
-  #TO-DO hacer que coincidan las tablas
-#end
-
 Entonces(/^debo ver "(.*?)" antes que "(.*?)"$/) do |cadena1, cadena2|
   #regexp = /#{cadena1}.*#{cadena2}/m # /m means match across newlines
   #page.body.should =~ regexp #Esto necesita que este definido should
   # match = /#{cadena1}.*#{cadena2}/m =~ page.body #Esto no me funcionaba.
-
   assert page.body.index(cadena1) < page.body.index(cadena2)
 end
 
