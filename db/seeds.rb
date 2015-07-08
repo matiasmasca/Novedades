@@ -42,6 +42,6 @@ news = [{:project_id => '1', :title => 'Pedido de X',:date =>'3-05-2015', messag
          {:project_id => '1', :title => 'Resolución del Juez',:date =>'10-06-2015', message: 'El juez resolvio tal y cual cosa'}
   	 ]
 
-news.each do |new|
-   New.create!(new)
+news.each do |notification|
+   Notification.create!(notification)
 end

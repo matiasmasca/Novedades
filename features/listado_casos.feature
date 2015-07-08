@@ -37,7 +37,7 @@ Escenario: ver novedades
     | title                         | message                                                                                                   |  project_id | date       |
     | Resolución Juez               | La jueza Barubudia dio resolución favorable                                                               | 1           | 03/06/2015 |
     Y seleccionó "Ver novedades"
-    Entonces veo un listado con las novedades
+    Entonces veo un listado con las 1 novedades
 
 Escenario: cliente no tiene casos.
     Dado que no tengo casos

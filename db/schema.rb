@@ -11,9 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630120024) do
+ActiveRecord::Schema.define(version: 20150707204846) do
 
-  create_table "news", force: :cascade do |t|
+  create_table "attachments", force: :cascade do |t|
+    t.string   "profile_image_id"
+    t.string   "title"
+    t.string   "profile_image_filename"
+    t.integer  "profile_image_size"
+    t.string   "profile_image_content_type"
+    t.integer  "notification_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "attachments", ["notification_id"], name: "index_attachments_on_notification_id"
+
+  create_table "notifications", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "title"
     t.date     "date"
@@ -22,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150630120024) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "news", ["project_id"], name: "index_news_on_project_id"
+  add_index "notifications", ["project_id"], name: "index_notifications_on_project_id"
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"

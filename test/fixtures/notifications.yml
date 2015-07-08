@@ -3,11 +3,11 @@
 one:
   project_id: 
   title: MyString
-  date: 2015-06-30
+  date: 2015-07-08
   message: MyText
 
 two:
   project_id: 
   title: MyString
-  date: 2015-06-30
+  date: 2015-07-08
   message: MyText

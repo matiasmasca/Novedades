@@ -32,6 +32,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise' #Para registración y autenticación de usuarios.
 
+# Para manejar los Adjuntos
+gem "mini_magick"
+#gem "refile", require: "refile/rails"
+gem 'refile', require: "refile/rails", git: 'https://github.com/refile/refile.git', branch: 'master'
+gem "refile-mini_magick"
+
 group :development do
   gem "better_errors" #Personaliza los mensajes de error de Rails.
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
@@ -63,9 +69,9 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
-  gem 'cucumber-rails', :require => false
+  # gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
-  gem 'database_cleaner' # to clear Cucumber's test database between runs
+  # gem 'database_cleaner' # to clear Cucumber's test database between runs
 
   gem 'capybara'         # lets Cucumber pretend to be a web browser #Supuestamente viene con cucumber-rails
   gem 'launchy'          # Abre programas. Nos sirve para: save_and_open_page

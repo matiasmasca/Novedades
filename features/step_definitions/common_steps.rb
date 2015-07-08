@@ -10,7 +10,7 @@ Dado(/^(?:estoy en la pantalla|estoy en la pantalla donde veo|que estoy en la pa
   when 'Mis casos'
     visit('/projects')
   when 'las novedades'
-    visit('/novedades')
+    visit('/notifications')
   else
     visit('/¿A donde queres ir?')
   end
@@ -35,11 +35,7 @@ Dado(/^seleccionó "(.*?)"$/) do |opcion|
   end
 end
 
-Entonces(/^veo un listado con las novedades$/) do
-  page.has_table?('news-list') #Que este la tabla
-  news = page.all('table#news-list tr').count
-  assert news > 0
-end
+
 
 ## De VER novedades
 

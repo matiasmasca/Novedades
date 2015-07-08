@@ -16,7 +16,7 @@ Antecedentes:
     | Reunion con Defensores        | nos encontramos en el café Marta DeSalvado                                                                | 1          | 2014-12-01 |
     | Resolución Juez Barubudia     | La jueza Barubudia dio resolución favorable                                                               | 1          | 2015-07-01 |
     Y seleccionó "Ver novedades"
-    Entonces veo un listado con las novedades
+    Entonces veo un listado con las 3 novedades
 
 Escenario: Veo listado de novedades.
     Dado que el caso tiene 3 novedades
