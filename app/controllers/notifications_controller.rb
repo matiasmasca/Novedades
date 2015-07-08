@@ -76,6 +76,6 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.require(:notification).permit(:project_id, :title, :date, :message, attachments_files:[])
+      params.require(:notification).permit(:project_id, :title, :date, :message)
     end
 end

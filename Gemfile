@@ -38,7 +38,9 @@ gem "mini_magick"
 gem "refile-mini_magick"
 #Pongo asi esta gema porque me estaba dando problemas con los multi-archivos
 #gem 'refile', require: "refile/rails", git: 'https://github.com/refile/refile.git', branch: 'master'
-gem 'refile', require: ['refile/rails', 'refile/image_processing']
+#gem 'refile', require: ['refile/rails', 'refile/image_processing']
+gem 'refile', require: ['refile/rails']
+
 
 group :development do
   gem "better_errors" #Personaliza los mensajes de error de Rails.

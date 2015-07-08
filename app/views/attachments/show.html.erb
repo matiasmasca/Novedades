@@ -27,7 +27,8 @@
 
 <p>
   <strong>profile_image_content_type:</strong>
-  <%= @attachment.profile_image_content_type %>
+  <%= @attachment.profile_image_content_type %><br>
+  <%= extension = @attachment.profile_image_content_type.split('/').last.downcase %>
 </p>
 
 <p>
@@ -35,5 +36,11 @@
   <%= @attachment.created_at %>
 </p>
 
+<p>
+  .attachment_url(object, name, *args, prefix: nil, filename: nil, format: nil, host: nil)
+  <%=  %>
+  <%= link_to "Descargar", attachment_url(@attachment, Refile.store.get(@attachment.profile_image_id), :call) %>
+
+</p>
 <%= link_to 'Edit', edit_attachment_path(@attachment) %> |
 <%= link_to 'Back', :back %>

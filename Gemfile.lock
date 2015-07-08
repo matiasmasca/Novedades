@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/refile/refile.git
+  revision: 0dc2072a90020c940102b099387c34297f89b321
+  branch: master
+  specs:
+    refile (0.5.5)
+      mime-types
+      rest-client (~> 1.8)
+      sinatra (~> 1.4.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -157,10 +167,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
-    refile (0.5.5)
-      mime-types
-      rest-client (~> 1.8)
-      sinatra (~> 1.4.5)
     refile-mini_magick (0.1.0)
       mini_magick (~> 4.0)
       refile (~> 0.5)
@@ -234,7 +240,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.1)
   rails_12factor
-  refile
+  refile!
   refile-mini_magick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

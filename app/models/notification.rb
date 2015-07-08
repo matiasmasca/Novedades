@@ -3,5 +3,5 @@ class Notification < ActiveRecord::Base
 
   has_many :attachment, inverse_of: :notifications, dependent: :destroy
 
-  accepts_attachments_for :attachments, append: true
+  #accepts_attachments_for :attachments, append: true
 end
