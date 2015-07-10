@@ -21,8 +21,15 @@
   </div>
 
   <div class="field">
-    <%= f.label "Archivos Adjuntos" %>
+    <%= f.label :profile_image, "Archivos Adjuntos" %><br>
     <%= f.attachment_field :profile_image %>
+
+    <% if @attachment.profile_image_id? %>
+      <%= image_tag attachment_url(@attachment, :profile_image, :fill, 100, 100) %>
+
+      <%= f.check_box :remove_profile_image %>
+      <%= f.label :remove_profile_image %>
+    <% end %>
   </div>
 
   <div class="actions">
