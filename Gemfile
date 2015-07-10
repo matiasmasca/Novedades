@@ -42,12 +42,13 @@ gem 'refile', require: ['refile/rails'], git: 'https://github.com/refile/refile.
 #gem 'refile', require: ['refile/rails']
 #gem "refile-mini_magick"
 
+gem 'bootstrap-sass'
 
 group :development do
   gem "better_errors" #Personaliza los mensajes de error de Rails.
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
 
-
+  gem 'rails_layout'
 end
 
 group :test do
