@@ -3,3 +3,10 @@
 <li><%= link_to 'Casos',   projects_path %></li>
 <li></li>
 <li><%= link_to 'About', pages_about_path %></li>
+<% if user_signed_in? %>
+  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+<% else %>
+  <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
+  <li><%= link_to 'Registrarse', new_user_registration_path %></li>
+<% end %>
