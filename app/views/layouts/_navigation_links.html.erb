@@ -1,12 +1,13 @@
 <%# add navigation links to this file %>
+<li><%= link_to 'Inicio',  root_path %></li>
+<% if user_signed_in? %>
 <li><%= link_to 'Clientes',  pages_home_path %></li>
 <li><%= link_to 'Casos',   projects_path %></li>
-<li></li>
+<li role="separator" class="divider"></li>
 <li><%= link_to 'About', pages_about_path %></li>
-<% if user_signed_in? %>
-  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+<li role="separator" class="divider"></li>
+<p class="navbar-text navbar-right"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <%= link_to "#{current_user.email}", destroy_user_session_path, :method=>'delete', class: "navbar-link", title: "Cerrar sesión" %></a></p>
 <% else %>
-  <li><%= link_to 'Iniciar Sesión', new_user_session_path %></li>
-  <li><%= link_to 'Registrarse', new_user_registration_path %></li>
+<li><%= link_to 'Acerca de', pages_about_path %></li>
 <% end %>
+<li role="separator" class="divider"></li>

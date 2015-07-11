@@ -8,10 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'Inicio', root_path, class: 'navbar-brand' %>
+      <a class="navbar-brand" href="<%= root_path %>" title="Novedades Terciar">
+        <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+      </a>
     </div>
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav nav-pills">
         <%= render 'layouts/navigation_links' %>
       </ul>
     </div>
