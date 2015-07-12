@@ -1,44 +1,37 @@
-<p id="notice"><%= notice %></p>
-
+<div class="container-fluid">
 <p>
-  <strong>Title:</strong>
+  <strong>Pertence Notificación Nro:</strong>
+  <%= @attachment.notification_id %>
+</p>
+<p>
+  <strong>Detalle archivo:</strong>
   <%= @attachment.title %>
 </p>
 
 <p>
-  <strong>From notification:</strong>
-  <%= @attachment.notification_id %>
-</p>
-
-<p>
-  <strong>profile_image_id:</strong>
-  <%= @attachment.profile_image_id %>
-</p>
-
-<p>
-  <strong>profile_image_filename:</strong>
+  <strong>Nombre del archivo:</strong>
   <%= @attachment.profile_image_filename %>
 </p>
 
 <p>
-  <strong>profile_image_size:</strong>
-  <%= @attachment.profile_image_size %>
+  <strong>Tamaño:</strong>
+  <%= @attachment.profile_image_size / 1024 %> Kb
 </p>
 
 <p>
-  <strong>profile_image_content_type:</strong>
+  <strong>Tipo de archivo:</strong>
   <%= @attachment.profile_image_content_type %><br>
-  <%= extension = @attachment.profile_image_content_type.split('/').last.downcase %>
+  Extension: <%= extension = @attachment.profile_image_content_type.split('/').last.downcase %>
 </p>
 
 <p>
-  <strong>created_at:</strong>
-  <%= @attachment.created_at %>
+  <strong>Creado el:</strong>
+  <%= @attachment.created_at.to_formatted_s(:long) %>
 </p>
 
 <p>
   <% if @attachment.profile_image_id? %>
-    <%= link_to "Ver Archivos Adjuntos", request.base_url + @attachment.path %>
+    <%= link_to "Descargar Archivo", request.base_url + @attachment.path %>
     <p> Pre-visualización del adjunto: </p>
     <% if extension == "pdf" %>
       <iframe width='300' height='300' src='<%= request.base_url + @attachment.path %>' frameborder='0' allowfullscreen></iframe>
@@ -48,3 +41,4 @@
      <% end %>
   <% end %>
 </p>
+<div>
