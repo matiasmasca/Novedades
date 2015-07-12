@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
   end
 
   def last_update
-
     last_update = Notification.where(project_id: self.id).last.date if Notification.where(project_id: self.id).last
+    last_update.to_formatted_s(:long)
   end
 end

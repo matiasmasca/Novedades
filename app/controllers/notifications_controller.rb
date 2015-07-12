@@ -15,6 +15,7 @@ class NotificationsController < ApplicationController
   # GET /notifications/1
   # GET /notifications/1.json
   def show
+    @attachments = Attachment.where(notification_id: @_params[:id])
   end
 
   # GET /notifications/new

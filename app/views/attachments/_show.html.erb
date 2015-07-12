@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @attachment.title %>
+</p>
+
+<p>
+  <strong>From notification:</strong>
+  <%= @attachment.notification_id %>
+</p>
+
+<p>
+  <strong>profile_image_id:</strong>
+  <%= @attachment.profile_image_id %>
+</p>
+
+<p>
+  <strong>profile_image_filename:</strong>
+  <%= @attachment.profile_image_filename %>
+</p>
+
+<p>
+  <strong>profile_image_size:</strong>
+  <%= @attachment.profile_image_size %>
+</p>
+
+<p>
+  <strong>profile_image_content_type:</strong>
+  <%= @attachment.profile_image_content_type %><br>
+  <%= extension = @attachment.profile_image_content_type.split('/').last.downcase %>
+</p>
+
+<p>
+  <strong>created_at:</strong>
+  <%= @attachment.created_at %>
+</p>
+
+<p>
+  <% if @attachment.profile_image_id? %>
+    <%= link_to "Ver Archivos Adjuntos", request.base_url + @attachment.path %>
+    <p> Pre-visualización del adjunto: </p>
+    <% if extension == "pdf" %>
+      <iframe width='300' height='300' src='<%= request.base_url + @attachment.path %>' frameborder='0' allowfullscreen></iframe>
+    <% else %>
+      <% #Esto esta así porque attachment_url de ReFile fallaba. %>
+      <%= link_to image_tag(Refile.attachment_url(@attachment, :profile_image), height: '300', width: '300', alt: "#{@attachment.profile_image_filename}"), @attachment.path %>
+     <% end %>
+  <% end %>
+</p>
