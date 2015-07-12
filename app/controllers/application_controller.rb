@@ -9,11 +9,20 @@ class ApplicationController < ActionController::Base
   protected
   # A donde va cuando inicia la sesión.
   def after_sign_in_path_for(resource)
-    "/pages/home"
+    if current_user.habilitado?
+      flash[:notice] = "Bienvenido #{current_user.nombre} - Cliente."
+      "/projects"
+    else
+      sign_out(resource)
+      flash[:notice] =  "Su usuario ha sido deshabilitado, por favor comuniquese con el Dr. Cosme Fulanito (mail@mail.com)."
+      "/"
+    end
   end
+
   # A donde va cuando finaliza la sesión.
   def after_sign_out_path_for(resource_or_scope)
     # request.referrer
+    flash[:notice] = "Sesión cerrada."
     "/"
   end
 

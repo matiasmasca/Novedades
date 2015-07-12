@@ -47,8 +47,9 @@ gem 'bootstrap-sass'
 group :development do
   gem "better_errors" #Personaliza los mensajes de error de Rails.
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
+  gem 'quiet_assets' #Mejora como se ven los Asset en la consola, cuando ejecutas Rails
+  gem 'rails_layout' #Para aplicar Boostrap a las vistas facilmente.
 
-  gem 'rails_layout'
 end
 
 group :test do
