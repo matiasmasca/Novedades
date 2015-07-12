@@ -23,8 +23,9 @@ Entonces(/^el mensaje "(.*?)"$/) do |mensaje|
 end
 
 Entonces(/^la fecha "(.*?)"$/) do |fecha|
-  date = Date.parse fecha
-  step %{veo un mensaje "#{date}"}
+  #save_and_open_page
+  #date = Date.parse fecha
+  step %{veo un mensaje "#{fecha}"}
 end
 
 
