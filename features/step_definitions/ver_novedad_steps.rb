@@ -28,7 +28,6 @@ Entonces(/^la fecha "(.*?)"$/) do |fecha|
   step %{veo un mensaje "#{fecha}"}
 end
 
-
 Entonces(/^veo la imagen en la pantalla$/) do
   pending # express the regexp above with the code you wish you had
 end

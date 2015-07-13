@@ -1,44 +1,27 @@
 <div class="container-fluid">
-<p>
-  <strong>Pertence Notificación Nro:</strong>
-  <%= @attachment.notification_id %>
-</p>
-<p>
-  <strong>Detalle archivo:</strong>
-  <%= @attachment.title %>
-</p>
+  <p>
+    <% if @attachment.profile_image_id? %>
+      <p> Pre-visualización del adjunto: </p>
+      <% if @attachment.extension == "pdf" %>
+        <iframe width='300' height='300' src='<%= request.base_url + @attachment.path %>' frameborder='0' allowfullscreen></iframe>
+      <% else %>
+        <% #Esto esta así porque attachment_url de ReFile fallaba. %>
+        <%= link_to image_tag(Refile.attachment_url(@attachment, :profile_image), height: '300', width: '300', alt: "#{@attachment.profile_image_filename}"), @attachment.path %>
+       <% end %>
+       <strong><%= link_to "Descargar Archivo", request.base_url + @attachment.path %></strong>
+    <% end %>
+  </p>
 
-<p>
-  <strong>Nombre del archivo:</strong>
-  <%= @attachment.profile_image_filename %>
-</p>
-
-<p>
-  <strong>Tamaño:</strong>
-  <%= @attachment.profile_image_size / 1024 %> Kb
-</p>
-
-<p>
-  <strong>Tipo de archivo:</strong>
-  <%= @attachment.profile_image_content_type %><br>
-  Extension: <%= extension = @attachment.profile_image_content_type.split('/').last.downcase %>
-</p>
-
-<p>
-  <strong>Creado el:</strong>
-  <%= @attachment.created_at.to_formatted_s(:long) %>
-</p>
-
-<p>
-  <% if @attachment.profile_image_id? %>
-    <%= link_to "Descargar Archivo", request.base_url + @attachment.path %>
-    <p> Pre-visualización del adjunto: </p>
-    <% if extension == "pdf" %>
-      <iframe width='300' height='300' src='<%= request.base_url + @attachment.path %>' frameborder='0' allowfullscreen></iframe>
-    <% else %>
-      <% #Esto esta así porque attachment_url de ReFile fallaba. %>
-      <%= link_to image_tag(Refile.attachment_url(@attachment, :profile_image), height: '300', width: '300', alt: "#{@attachment.profile_image_filename}"), @attachment.path %>
-     <% end %>
-  <% end %>
-</p>
+  <p>
+    <strong>Tamaño del archivo:</strong>
+    <%= @attachment.profile_image_size / 1024 %> Kb
+  </p>
+  <p>
+    <strong>Detalle archivo:</strong>
+    <%= @attachment.title %>
+  </p>
+  <p>
+    <strong>Subido el:</strong>
+    <%= @attachment.created_at.to_formatted_s(:long) %>
+  </p>
 <div>

@@ -28,9 +28,35 @@
              <%= link_to "Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-default", target: "_black", download: attachment.title  %>
             <% end %>
           </td>
-          <td><%= link_to 'Ver archivo', attachment, class: "btn btn-default" %></td>
+          <td>
+          <!-- Collap -->
+          <div class="bs-example">
+          <p>
+            <a class="btn btn-primary collapsed" role="button" data-toggle="collapse" href="#collapse-<%= attachment.id %>" aria-expanded="false" aria-controls="collapseExample">
+              Ver Archivo
+            </a>
+          </p>
+        </div>
+        <!-- /Collap -->
+         </td>
         </tr>
+        <!-- Collapsed -->
+        <tr>
+          <td>
+            <div style="height: 0px;" aria-expanded="false" class="collapse" id="collapse-<%= attachment.id %>">
+              <div class="well">
+                <!--/show attach -->
+                  <% @attachment = attachment %>
+                  <%= render partial: "attachments/show", object: @attachment %>
+                <!--/show attach -->
+              </div>
+            </div>
+         </td>
+       </tr>
+        <!-- /Collapsed -->
       <% end %>
+
+
     </tbody>
   </table>
 

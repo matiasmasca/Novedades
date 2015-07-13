@@ -19,7 +19,7 @@
         <td><%= notification.date.to_formatted_s(:long) %></td>
         <td><%= notification.message %></td>
         <td><span class="badge alert-warning"><%= notification.archivos_adjuntos %></span></td>
-        <td><%= link_to 'Ver más', project_notification_path(notification.project_id,notification.id), class: "btn btn-default" %></td>
+        <td><%= link_to 'Ver más', project_notification_path(notification.project_id, notification.id), class: "btn btn-default" %></td>
         <% if current_user.tipo == 1 %>
           <td><%= link_to 'Editar', edit_project_notification_path(notification.project_id,notification.id), class: "btn btn-default" %></td>
           <td><%= link_to 'Destroy',  project_notification_path(notification.project_id,notification.id), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></td>
