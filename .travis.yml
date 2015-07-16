@@ -2,6 +2,9 @@ language: ruby
 rvm:
   - ruby-2.2.0
 #  - ruby-head
+env:
+  global:
+    - repo_token: COVERALLS
 bundler_args: "--without production"
 script:
 - RAILS_ENV=test
