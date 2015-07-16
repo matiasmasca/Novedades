@@ -44,6 +44,8 @@ gem 'refile', require: ['refile/rails'], git: 'https://github.com/refile/refile.
 
 gem 'bootstrap-sass'
 
+gem 'coveralls', require: false #Para medir la cobertura de las pruebas
+
 group :development do
   gem "better_errors" #Personaliza los mensajes de error de Rails.
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
