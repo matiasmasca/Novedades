@@ -23,11 +23,11 @@ users.each do |user|
    User.create!(user)
 end
 
-projects = [{:name => 'DeRoche vs Ramon',:customer_id => '1'},
-         {:name => 'DeRoche vs Gregorio',:customer_id => '1'},
-         {:name => 'DeRoche vs Micaëla',:customer_id => '1'},
-         {:name => 'DeRoche vs Codito',:customer_id => '1'},
-         {:name => 'DeRoche vs Su Mujer',:customer_id => '1'}
+projects = [{:name => 'DeRoche c/ Ramon s/ indemnización por despido EXP N°111999',:customer_id => '1'},
+         {:name => 'DeRoche c/ Gregory s/ indemnización por despido EXP N°112000',:customer_id => '1'},
+         {:name => 'DeRoche c/ Micaëla s/ indemnización por acoso sexual EXP N°333444',:customer_id => '1'},
+         {:name => 'DeRoche c/ Codito s/ falta de pago honorarios EXP N°333444',:customer_id => '1'},
+         {:name => 'DeRoche c/ SuMujer s/ divorsio EXP N°112000',:customer_id => '1'}
 
   	 ]
 
