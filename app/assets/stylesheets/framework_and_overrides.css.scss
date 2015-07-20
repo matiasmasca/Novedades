@@ -13,11 +13,13 @@ body { padding-top: 60px; }
 
 // Bootstrap body padding for fixed navbar
 body { padding-top: 60px; }
+@import "bootstrap";
 
 @import "bootstrap/bootswatch/yeti/bootstrap";
 
+
 // Whatever application styles you have go last
-//@import "base";
+@import "base";
 
 // make all images responsive by default
 img {
