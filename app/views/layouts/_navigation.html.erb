@@ -10,7 +10,7 @@
       </button>
       <a class="navbar-brand" href="<%= root_path %>" title="Novedades Terciar">
         <i class="fa fa-gavel"></i>
-        <span class="glyphicon glyphicon-inbox" aria-hidden="true">Novedades</span>
+        <span aria-hidden="true"> Novedades</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -19,7 +19,7 @@
       </ul>
       <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "#{current_user.email}", destroy_user_session_path, :method=>'delete', class: "navbar-link glyphicon glyphicon-user", title: "Cerrar sesión" %></a></li>
+        <li><%= link_to " #{current_user.email}", destroy_user_session_path, :method=>'delete', class: "navbar-link fa fa-user", title: "&nbsp; Cerrar sesión" %></a></li>
       </ul>
       <% end %>
     </div>
