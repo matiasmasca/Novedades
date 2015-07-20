@@ -45,6 +45,9 @@ gem 'refile', require: ['refile/rails'], git: 'https://github.com/refile/refile.
 #gem 'refile', require: ['refile/rails']
 #gem "refile-mini_magick"
 
+#Gretel para la navegabilidad de la aplicación.
+gem "gretel"
+
 # Servicio de covertura de test y estadisticas.
 gem 'coveralls', require: false #Para medir la cobertura de las pruebas
 
@@ -53,7 +56,6 @@ group :development do
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
   gem 'quiet_assets' #Mejora como se ven los Asset en la consola, cuando ejecutas Rails
   #gem 'rails_layout' #Para aplicar Boostrap a las vistas facilmente.
-  gem "gretel" #Para la navegabilidad de la aplicación.
 end
 
 group :test do
