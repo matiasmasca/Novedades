@@ -3,8 +3,13 @@
   <h4 align="left"><strong>Título:</strong> <%= @notification.title %> <button type="button" class="btn btn-default">Marcar como leída</button> </h4>
   <h4 align="left"><strong>Fecha:</strong> <%= @notification.fecha %> </h4>
   <hr size="1" />
-  <h4 align="left"><strong>Detalle:</strong></h4>
-  <h5 align="left"><%= @notification.message %></h5>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading"><h4 align="left"><strong>Detalle:</strong></h4></div>
+      <div class="panel-body">
+        <h5 align="left"><%= @notification.message %></h5>
+      </div>
+  </div>
   <hr size="1" />
   <h4 align="left">Adjuntos:</h4>
 
@@ -14,7 +19,7 @@
         <th>Nro.</th>
         <th>Detalle adjunto</th>
         <th>Archivo adjunto</th>
-        <th></th>
+        <th colspan="4"></th>
       </tr>
     </thead>
 
@@ -26,23 +31,18 @@
           <td>
             <% if attachment.profile_image_id? %>
              <%= link_to "Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-default", target: "_black", download: attachment.title  %>
-            <% end %>
-          </td>
-          <td>
+
           <!-- Collap -->
-          <div class="bs-example">
-          <p>
             <a class="btn btn-info collapsed" role="button" data-toggle="collapse" href="#collapse-<%= attachment.id %>" aria-expanded="false" aria-controls="collapseExample">
               Ver Archivo
             </a>
-          </p>
-        </div>
         <!-- /Collap -->
+        <% end %>
          </td>
         </tr>
         <!-- Collapsed -->
         <tr>
-          <td colspan="" >
+          <td colspan="4" >
             <div style="height: 0px;" aria-expanded="false" class="collapse" id="collapse-<%= attachment.id %>">
               <div class="well">
                 <!--/show attach -->
@@ -62,23 +62,6 @@
 
   <hr size="1" />
 
-  <h4 align="left">Comentarios:</h4>
-
-  <table class="table table-striped">
-      <tbody>
-          <tr>
-              <td>Cliente</td>
-              <td>Debo presentarme el lunes en el juzgado?</td>
-              <td>día 11/11/1111</td>
-          </tr>
-          <tr>
-              <td>Dr. Cinicius</td>
-              <td>No será necesario, ya que envié un escrito para evitarlo. Saludos.</td>
-              <td>día 11/11/1111</td>
-          </tr>
-      </tbody>
-  </table>
-
-<%= link_to 'Edit', edit_notification_path(@notification) %> |
-<%= link_to 'Back', :back %>
+<%= link_to 'Volver', :back %>
+<%= link_to 'Edit', edit_notification_path(@notification) if current_user.tipo == 1 %>
 <div>

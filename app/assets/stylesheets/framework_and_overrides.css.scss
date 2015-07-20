@@ -1,12 +1,31 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
-@import "bootstrap";
+
+//@import "bootstrap/bootswatch";
+
+@import "bootstrap/bootswatch/yeti/variables";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+// And finally bootswatch style itself
+@import "bootstrap/bootswatch/yeti/bootswatch";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+@import "bootstrap/bootswatch/yeti/bootstrap";
+
+// Whatever application styles you have go last
+//@import "base";
 
 // make all images responsive by default
 img {
   @extend .img-responsive;
   margin: 0 auto;
   }
+
+/*
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
@@ -80,3 +99,4 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+*/

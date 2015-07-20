@@ -5,6 +5,9 @@ ruby '2.2.0' #Versión de Ruby.
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -42,16 +45,14 @@ gem 'refile', require: ['refile/rails'], git: 'https://github.com/refile/refile.
 #gem 'refile', require: ['refile/rails']
 #gem "refile-mini_magick"
 
-gem 'bootstrap-sass'
-
+# Servicio de covertura de test y estadisticas.
 gem 'coveralls', require: false #Para medir la cobertura de las pruebas
 
 group :development do
   gem "better_errors" #Personaliza los mensajes de error de Rails.
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
   gem 'quiet_assets' #Mejora como se ven los Asset en la consola, cuando ejecutas Rails
-  gem 'rails_layout' #Para aplicar Boostrap a las vistas facilmente.
-
+  #gem 'rails_layout' #Para aplicar Boostrap a las vistas facilmente.
 end
 
 group :test do
@@ -63,9 +64,6 @@ group :test do
   # database_cleaner is not required, but highly recommended. to clear Cucumber's test database between runs
   gem 'database_cleaner'
 end
-
-# Servicio de covertura de test y estadisticas.
-# gem 'coveralls', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

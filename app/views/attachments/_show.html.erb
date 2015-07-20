@@ -3,7 +3,7 @@
     <% if @attachment.profile_image_id? %>
       <p> Pre-visualización del adjunto: </p>
       <% if @attachment.extension == "pdf" %>
-        <iframe width='300' height='300' src='<%= request.base_url + @attachment.path %>' frameborder='0' allowfullscreen></iframe>
+        <iframe width='100%' height='800 px' src='<%= request.base_url + @attachment.path %>' frameborder='0' allowfullscreen></iframe>
       <% else %>
         <% #Esto esta así porque attachment_url de ReFile fallaba. %>
         <%= link_to image_tag(Refile.attachment_url(@attachment, :profile_image), height: '300', width: '300', alt: "#{@attachment.profile_image_filename}"), @attachment.path %>
