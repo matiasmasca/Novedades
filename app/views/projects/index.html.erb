@@ -22,7 +22,7 @@
         <td>Juzgado en lo Contencioso Administrativo N° 1</td>
         <td><span class="badge alert-warning"><%= project.news_count %></span></td>
         <td><%= project.last_update %></td>
-        <td><%= link_to 'Ver novedades', project_notifications_path(project), type: "button", class: "btn btn-default" %></td>
+        <td><%= link_to ' Ver novedades', project_notifications_path(project), type: "button", class: "btn btn-default fa fa-folder-o" %></td>
         <% if current_user.tipo == 1 %>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>

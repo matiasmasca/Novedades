@@ -30,10 +30,10 @@
           <td><%= attachment.title %></td>
           <td>
             <% if attachment.profile_image_id? %>
-             <%= link_to "Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-default", target: "_black", download: attachment.title  %>
+             <%= link_to " Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-default fa fa-cloud-download", target: "_black", download: attachment.title  %>
 
           <!-- Collap -->
-            <a class="btn btn-info collapsed" role="button" data-toggle="collapse" href="#collapse-<%= attachment.id %>" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-info fa fa-eye collapsed" role="button" data-toggle="collapse" href="#collapse-<%= attachment.id %>" aria-expanded="false" aria-controls="collapseExample">
               Ver Archivo
             </a>
         <!-- /Collap -->
