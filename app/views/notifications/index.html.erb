@@ -33,3 +33,5 @@
 
 <%= link_to 'New Notification', new_project_notification_path if params[:project_id] && current_user.tipo == 1 %>
 </div>
+
+<% breadcrumb :project, @notifications.first.project %>

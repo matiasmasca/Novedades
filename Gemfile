@@ -53,6 +53,7 @@ group :development do
   gem "binding_of_caller" #Muestra valores de variables de BetterErrors
   gem 'quiet_assets' #Mejora como se ven los Asset en la consola, cuando ejecutas Rails
   #gem 'rails_layout' #Para aplicar Boostrap a las vistas facilmente.
+  gem "gretel" #Para la navegabilidad de la aplicación.
 end
 
 group :test do

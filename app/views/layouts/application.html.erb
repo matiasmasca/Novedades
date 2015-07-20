@@ -15,9 +15,13 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
+      <!-- Navegación -->
+      <%= breadcrumbs pretext: "", separator: " &rsaquo; ", style: :bootstrap %>
+      <!-- /Navegación -->
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+
     <!-- Pie -->
 <hr>
   <footer class="bottom">

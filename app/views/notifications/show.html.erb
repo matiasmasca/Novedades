@@ -65,3 +65,5 @@
 <%= link_to 'Volver', :back %>
 <%= link_to 'Edit', edit_notification_path(@notification) if current_user.tipo == 1 %>
 <div>
+
+  <% breadcrumb :notification, @notification %>
