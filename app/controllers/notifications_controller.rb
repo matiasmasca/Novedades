@@ -16,6 +16,9 @@ class NotificationsController < ApplicationController
   # GET /notifications/1.json
   def show
     @attachments = Attachment.where(notification_id: @_params[:id])
+
+    @notification.mark_as_read!(true) if params[:cambiar_estado] == 'Leida'
+    @notification.mark_as_read!(false) if params[:cambiar_estado] == 'NoLeida'
   end
 
   # GET /notifications/new

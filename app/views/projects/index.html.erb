@@ -1,6 +1,5 @@
 <div class="container-fluid">
- <h1>Usuario: <%= current_user.nombre %></h1>
-<h2>Lista Casos</h2>
+<h2>Lista de Casos</h2>
 <table id="projects-list" class="table">
   <thead>
     <tr>
@@ -32,6 +31,7 @@
     <% end %>
   </tbody>
 </table>
+<h4>Casos de: <%= current_user.nombre %></h4>
 </div>
 <br>
 

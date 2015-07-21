@@ -6,20 +6,19 @@
     <tr>
       <th>Título</th>
       <th>Fecha</th>
-      <th>Detalle</th>
       <th>Archivos adjuntos</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @notifications.each do |notification| %>
-      <tr>
+     <%= read_mark_line(notification) %>
         <td><%= notification.title %></td>
         <td><%= notification.date.to_formatted_s(:long) %></td>
         <td><span class="badge alert-warning"><%= notification.archivos_adjuntos %></span></td>
         <td><%= link_to ' Ver más', project_notification_path(notification.project_id, notification.id), class: "btn btn-default fa fa-share" %>
-        <%= link_to ' Leida', project_notification_path(notification.project_id, notification.id), class: "btn btn-default fa fa-check-square-o" %>
         <% if current_user.tipo == 1 %>
           <td><%= link_to 'Editar', edit_project_notification_path(notification.project_id,notification.id), class: "btn btn-default" %></td>
           <td><%= link_to 'Destroy',  project_notification_path(notification.project_id,notification.id), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></td>

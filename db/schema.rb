@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707204846) do
+ActiveRecord::Schema.define(version: 20150721204846) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "profile_image_id"
@@ -31,8 +31,9 @@ ActiveRecord::Schema.define(version: 20150707204846) do
     t.string   "title"
     t.date     "date"
     t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "read_mark",  default: false
   end
 
   add_index "notifications", ["project_id"], name: "index_notifications_on_project_id"

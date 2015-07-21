@@ -14,4 +14,8 @@ class Notification < ActiveRecord::Base
     fecha = Date.parse(self.date.to_s)
     fecha.strftime('%d/%m/%Y')
   end
+
+  def mark_as_read!(marca)
+    self.update_attributes! :read_mark => marca
+  end
 end

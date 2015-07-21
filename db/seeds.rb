@@ -35,11 +35,11 @@ projects.each do |project|
    Project.create!(project)
 end
 
-news = [{:project_id => '1', :title => 'Pedido de X',:date =>'3-05-2015', message: 'se presento tal cosa'},
-         {:project_id => '1', :title => 'Contra demanda',:date =>'10-05-2015', message: 'se presento tal otra'},
-         {:project_id => '1', :title => 'Accion punitoria',:date =>'20-05-2015', message: 'se presento tal otra otra'},
-         {:project_id => '1', :title => 'pedido a juez',:date =>'30-05-2015', message: 'se presento tal otra otra otra'},
-         {:project_id => '1', :title => 'Resolución del Juez',:date =>'10-06-2015', message: 'El juez resolvio tal y cual cosa'}
+news = [{:project_id => '1', :title => 'Pedido de X',:date =>'3-05-2015', message: 'se presento tal cosa', read_mark: true},
+         {:project_id => '1', :title => 'Contra demanda',:date =>'10-05-2015', message: 'se presento tal otra', read_mark: false},
+         {:project_id => '1', :title => 'Accion punitoria',:date =>'20-05-2015', message: 'se presento tal otra otra', read_mark: false},
+         {:project_id => '1', :title => 'pedido a juez',:date =>'30-05-2015', message: 'se presento tal otra otra otra', read_mark: false},
+         {:project_id => '1', :title => 'Resolución del Juez',:date =>'10-06-2015', message: 'El juez resolvio tal y cual cosa', read_mark: false}
   	 ]
 
 news.each do |notification|
