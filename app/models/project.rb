@@ -1,9 +1,9 @@
 class Project < ActiveRecord::Base
   belongs_to :customer, autosave: true
   has_many :notifications, inverse_of: :project, dependent: :destroy
-
+  #read_mark
   def news_count
-    news_count = Notification.where(project_id: self.id).count
+    news_count = Notification.where(project_id: self.id, read_mark: false).count
   end
 
   def last_update
