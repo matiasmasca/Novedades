@@ -1,7 +1,6 @@
 <!-- add navigation links to this file -->
 <li class="active"><%= link_to 'Inicio',  root_path, class: "active" %></li>
 <% if user_signed_in? %>
-<li><%= link_to ' Clientes',  pages_home_path %></li>
 <li ><%= link_to ' Casos', projects_path, class: "fa fa-book" %></li>
 <li role="separator" class="divider"></li>
 <li><%= link_to ' Acerca de', pages_about_path, class: "navbar-link fa fa-info-circle"%>
