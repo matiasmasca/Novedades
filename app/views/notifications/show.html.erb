@@ -4,12 +4,15 @@
   <h4 align="left"><strong>Fecha:</strong> <%= @notification.fecha %> </h4>
   <hr size="1" />
 
-  <div class="panel panel-primary">
-    <div class="panel-heading"><h4 align="left"><strong>Detalle:</strong></h4></div>
-      <div class="panel-body">
+  <div class="panel panel-default">
+    <div class="panel-heading" align="left">
+       <strong>Detalle:</strong>
+    </div>
+    <div class="panel-body">
         <h5 align="left"><%= @notification.message %></h5>
-      </div>
+    </div>
   </div>
+  
   <%= read_mark_button @notification %>
 
   <hr size="1" />

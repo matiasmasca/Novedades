@@ -51,6 +51,24 @@
       ],
       "/home/mato/Novedades/app/helpers/application_helper.rb": [
         1,
+        1,
+        2,
+        0,
+        null,
+        2,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        12,
+        0,
+        null,
+        12,
+        null,
+        null,
         null
       ],
       "/home/mato/Novedades/app/helpers/attachments_helper.rb": [
@@ -195,6 +213,10 @@
         2,
         2,
         null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/home/mato/Novedades/app/controllers/notifications_controller.rb": [
@@ -215,6 +237,9 @@
         null,
         null,
         1,
+        2,
+        null,
+        2,
         2,
         null,
         null,
@@ -298,6 +323,6 @@
         null
       ]
     },
-    "timestamp": 1437432140
+    "timestamp": 1437490121
   }
 }
