@@ -1,11 +1,6 @@
 module ProjectsHelper
-  def badge_notifications(project)
-      if project.news_count > 0
-        #verde
-        @content = tag(:span, class: "badge pull-right alert-success")
-      else
-        #default
-        @content = tag(:span, class: "badge pull-right alert-default")
-      end
+  def project_badge(project)
+    count = project.news_count
+    badge_notifications(count)
   end
 end

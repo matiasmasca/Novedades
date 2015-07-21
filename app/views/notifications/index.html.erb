@@ -4,9 +4,9 @@
 <table id="notifications-list" class="table table-striped">
   <thead>
     <tr>
-      <th>Título</th>
+      <th>Título novedad</th>
       <th>Fecha</th>
-      <th>Archivos adjuntos</th>
+      <th><span class="fa fa-paperclip"> Archivos adjuntos</th>
       <th></th>
       <th></th>
     </tr>
@@ -17,7 +17,7 @@
      <%= read_mark_line(notification) %>
         <td><%= notification.title %></td>
         <td><%= notification.date.to_formatted_s(:long) %></td>
-        <td><span class="badge alert-default"><%= notification.archivos_adjuntos %></span></td>
+        <td></span><%= attachment_badge(notification) %><%= notification.archivos_adjuntos %></span></td>
         <td><%= link_to ' Ver más', project_notification_path(notification.project_id, notification.id), class: "btn btn-default fa fa-share" %>
         <% if current_user.tipo == 1 %>
           <td><%= link_to 'Editar', edit_project_notification_path(notification.project_id,notification.id), class: "btn btn-default" %></td>

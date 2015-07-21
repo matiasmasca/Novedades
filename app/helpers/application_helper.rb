@@ -17,4 +17,14 @@ module ApplicationHelper
       @content = tag("tr")
     end
   end
+
+  def badge_notifications(count)
+      if count > 0
+        #verde
+        @content = tag(:span, class: "badge alert-success")
+      else
+        #default
+        @content = tag(:span, class: "badge")
+      end
+  end
 end

@@ -12,7 +12,7 @@
         <h5 align="left"><%= @notification.message %></h5>
     </div>
   </div>
-  
+
   <%= read_mark_button @notification %>
 
   <hr size="1" />
@@ -35,13 +35,12 @@
           <td><%= attachment.title %></td>
           <td>
             <% if attachment.profile_image_id? %>
-             <%= link_to " Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-default fa fa-cloud-download", target: "_black", download: attachment.title  %>
-
-          <!-- Collap -->
-            <a class="btn btn-info fa fa-eye collapsed" role="button" data-toggle="collapse" href="#collapse-<%= attachment.id %>" aria-expanded="false" aria-controls="collapseExample">
+           <!-- Collap -->
+            <a class="btn btn-lg btn-info fa fa-eye collapsed" role="button" data-toggle="collapse" href="#collapse-<%= attachment.id %>" aria-expanded="false" aria-controls="collapseExample">
               Ver Archivo
             </a>
-        <!-- /Collap -->
+          <!-- /Collap -->
+          <%= link_to " Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-lg btn-success fa fa-cloud-download", target: "_black", download: attachment.title  %>
         <% end %>
          </td>
         </tr>

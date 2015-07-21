@@ -69,6 +69,16 @@
         12,
         null,
         null,
+        null,
+        1,
+        22,
+        null,
+        1,
+        null,
+        null,
+        21,
+        null,
+        null,
         null
       ],
       "/home/mato/Novedades/app/helpers/attachments_helper.rb": [
@@ -77,6 +87,10 @@
       ],
       "/home/mato/Novedades/app/helpers/notifications_helper.rb": [
         1,
+        1,
+        12,
+        12,
+        null,
         null
       ],
       "/home/mato/Novedades/app/helpers/pages_helper.rb": [
@@ -99,12 +113,7 @@
         1,
         1,
         10,
-        null,
-        1,
-        null,
-        null,
-        9,
-        null,
+        10,
         null,
         null
       ],
@@ -214,7 +223,7 @@
         null,
         null,
         1,
-        12,
+        24,
         null,
         null,
         1,
@@ -332,6 +341,6 @@
         null
       ]
     },
-    "timestamp": 1437500728
+    "timestamp": 1437504246
   }
 }
