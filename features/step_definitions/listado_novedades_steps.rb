@@ -9,7 +9,9 @@ Entonces(/^veo una etiqueta de colores que identifica que el caso tiene (\d+) no
   step %{estoy en la pantalla donde veo "Mis casos"}
   page.has_table?('projects-list') #Que este la tabla
   #projects-list > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(3) > span:nth-child(1)
-  news = page.find('table tbody tr span').text
+  news = page.find('#projects-list > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(5)').text
+  #puts "News == " + news
+  #save_and_open_page
   assert_equal news_count, news #MiniTest assert_equal 'expected', 'actual'
 end
 

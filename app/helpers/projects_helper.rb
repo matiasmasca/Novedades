@@ -8,5 +8,4 @@ module ProjectsHelper
         @content = tag(:span, class: "badge pull-right alert-default")
       end
   end
-
 end
