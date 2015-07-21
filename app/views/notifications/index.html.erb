@@ -1,6 +1,7 @@
 <div class="container-fluid">
 <h1>Listando Novedades del Caso</h1>
-<h2><%= @notifications.first.project.name %></h2>
+<% @project =  Project.find_by_id(params[:project_id]) %>
+<h2><%= @project.name %></h2>
 <table id="notifications-list" class="table table-striped">
   <thead>
     <tr>
@@ -33,4 +34,4 @@
 <%= link_to 'New Notification', new_project_notification_path if params[:project_id] && current_user.tipo == 1 %>
 </div>
 
-<% breadcrumb :project, @notifications.first.project %>
+<% breadcrumb :project, @project %>
