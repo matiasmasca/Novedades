@@ -1,7 +1,8 @@
 <!-- add navigation links to this file -->
 <li class="active"><%= link_to 'Inicio',  root_path, class: "active" %></li>
 <% if user_signed_in? %>
-<li ><%= link_to ' Casos', projects_path, class: "fa fa-book" %></li>
+<%= render 'layouts/navigation_admin' if current_user.tipo == 1 %>
+<li><%= link_to ' Casos', projects_path, class: "fa fa-book" if current_user.tipo == 2 %></li>
 <li role="separator" class="divider"></li>
 <li><%= link_to ' Acerca de', pages_about_path, class: "navbar-link fa fa-info-circle"%>
 <li role="separator" class="divider"></li>

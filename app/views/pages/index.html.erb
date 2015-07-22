@@ -9,3 +9,9 @@
   <%= render partial: "bienvenida"  %>
 <% end %>
 <!--/bienvenida -->
+
+<!--/Admin -->
+<% if user_signed_in? %>
+  <%= render partial: "dashboard"  %>
+<% end %>
+<!--/Admin -->

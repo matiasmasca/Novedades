@@ -1,0 +1,36 @@
+
+    <li class="dropdown">
+      <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="fa fa-user"></span> Administrar Clientes <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to ' Nuevo usuario', "#", class: 'fa fa-user'  %></li>
+          <li class="divider"></li>
+          <li><%= link_to ' Listado Clientes', "#", class: "fa fa-list" %></li>
+
+        </ul>
+    </li>
+    <li class="dropdown"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="fa fa-book"></span> Administrar Casos<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><%= link_to ' Nuevo Caso', new_project_path, class: 'fa fa-folder' %></li>
+            <li class="divider"></li>
+            <li><%= link_to ' Listado Casos',projects_path, class: "fa fa-list" %></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="fa fa-newspaper-o"></span> Administrar Novedades <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to ' Nuevo Novedad', new_notification_path, class: 'fa fa-folder' %></li>
+            <li class="divider"></li>
+            <li><%= link_to ' Listado Novedades',notifications_path, class: "fa fa-list" %></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="fa fa-comment"></span> Administrar Comentarios <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Nuevo Comentario</a>
+            </li>
+            <li><a href="#">Ver Comentarios</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a>
+            </li>
+        </ul>
+    </li>
+    <li role="separator" class="divider"></li>

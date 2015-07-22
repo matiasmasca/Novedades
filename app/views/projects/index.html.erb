@@ -17,23 +17,24 @@
       <tr>
         <td><%= project.id %></td>
         <td><%= project.name %></td>
-        <td>EXP.N° 000.000</td>
-        <td>Juzgado en lo Contencioso Administrativo N° 1</td>
+        <td><%= project.judicial_record_number %></td>
+        <td><%= court_name(project.court.to_i - 1) %></td>
         <td class="text-center"><%= project_badge(project) %><%= project.news_count %></span></td>
         <td><%= project.last_update %></td>
         <td><%= link_to ' Ver novedades', project_notifications_path(project), type: "button", class: "btn btn-default fa fa-folder-o" %></td>
         <% if current_user.tipo == 1 %>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to ' Ver', project, class: "btn btn-info fa fa-plus-square-o", title: 'Ver detalles del caso', data: { toggle: 'tooltip', placement: 'top', original_title: 'Ver detalles del caso' } %></td>
+        <td><%= link_to ' Editar', edit_project_path(project), class: "btn btn-warning fa fa-pencil", title: 'Editar caso', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar detalles del caso' }  %></td>
+        <td><%= link_to ' Eliminar', project, class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar este caso? \n" + project.name + ""} %></td>
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-<h4>Casos de: <%= current_user.nombre %></h4>
+<h4><%= "Casos de:" + current_user.nombre if current_user.tipo == 2 %></h4>
 </div>
 <br>
-
-<%= link_to 'Nuevo caso', new_project_path if current_user.tipo == 1 %>
+<div class="form-group">
+<%= link_to ' Nuevo caso', new_project_path, class: "btn btn-primary fa fa-folder-o" if current_user.tipo == 1 %>
+</div>
 <% breadcrumb :projects %>
