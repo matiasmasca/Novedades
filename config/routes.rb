@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'customers/index'
 
+  get 'notifications/update_project', as: 'update_project'
+
   unauthenticated do
     get 'pages/home'
     get 'pages/about'

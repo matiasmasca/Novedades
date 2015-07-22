@@ -1,5 +1,21 @@
-<h1>New Notification</h1>
+<h1>Nueva Novedad</h1>
+
+<%= form_for :project do |f| %>
+  <%= f.label :customer_id, "Cliente: ", class: 'control-label' %><br>
+  <%= f.select :customer_id, options_for_select(@customers.collect { |user|
+    [user.nombre, user.id] }, 0), {prompt: 'Seleccione un Cliente'}, { class: "form-control", id: 'customer_select' } %>
+    <hr size="1" />
+
+  <%= f.label :project_id, "Caso: ", class: 'control-label' %><br>
+  <%= f.select :project_id, options_for_select(@projects.collect { |project|
+    [project.name, project.customer_id] }, 0), {prompt: 'Seleccione un Caso'}, { class: "form-control", id: 'project_select' } %>
+<% end %>
+
+<hr size="1" />
 
 <%= render 'form' %>
 
-<%= link_to 'Back', :back %>
+<h3> Archivos adjuntos: </h3>
+<h4> Para agregar adjuntos, primero debe crear la Novedad y luego podrá hacerlo desde Editar o desde Ver Novedad.</h4>
+
+<%= link_to 'Volver', :back %>

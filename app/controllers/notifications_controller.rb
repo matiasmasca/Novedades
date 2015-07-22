@@ -24,6 +24,13 @@ class NotificationsController < ApplicationController
   # GET /notifications/new
   def new
     @notification = Notification.new
+
+    #@proyects = Project.where("customer_id = ?", Project.first.id)
+    @projects = Project.all
+
+    #User.includes("projects").where(projects: {customer_id: id})
+    @customers = User.where(tipo: 2)
+    #raise 'Ouch!'
   end
 
   # GET /notifications/1/edit
@@ -72,6 +79,13 @@ class NotificationsController < ApplicationController
     end
   end
 
+  def update_project
+      @projects = Project.where("customer_id = ?", params[:customer_id])
+      respond_to do |format|
+        format.js
+      end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_notification
@@ -80,6 +94,6 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.require(:notification).permit(:project_id, :title, :date, :message)
+      params.require(:notification).permit(:project_id, :title, :date, :message, :customer_id)
     end
 end

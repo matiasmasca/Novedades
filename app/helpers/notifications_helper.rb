@@ -3,4 +3,5 @@ module NotificationsHelper
     count = notification.archivos_adjuntos
     badge_notifications(count)
   end
+  
 end

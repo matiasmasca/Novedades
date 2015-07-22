@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   belongs_to :customer, autosave: true
+  belongs_to :user, autosave: true
   has_many :notifications, inverse_of: :project, dependent: :destroy
   #read_mark
   def news_count
