@@ -6,17 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 users = [{:nombre => 'DeRoche',:email => 'don@deroche.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-    	  {:nombre => 'Dr. Pepito',:email => 'admin@estudio.com', :password => "clave12345", :password_confirmation => "clave12345", :tipo => '1', :habilitado => 'true'},
-    	  {:nombre => 'Gregorio',:email => 'dostorres@hobbit.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
-     	  {:nombre => 'Gregorio',:email => 'examples@itaca.mx',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
-     	  {:nombre => 'Ramon',:email => 'unemail1@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-     	  {:nombre => 'Gregorio',:email => 'unemail2@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+    	  {:nombre => 'Gregorio hobbit',:email => 'dostorres@hobbit.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
+     	  {:nombre => 'Gregorio Itaca',:email => 'examples@itaca.mx',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
+     	  {:nombre => 'Ramon Go',:email => 'unemail1@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+     	  {:nombre => 'Micaëla',:email => 'unemail2@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
      	  {:nombre => 'Gregorio',:email => 'unemail3@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
      	  {:nombre => 'Gregorio',:email => 'unemail4@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
      	  {:nombre => 'Gregorio',:email => 'unemail5@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
         {:nombre => 'Gregorio',:email => 'jurado1@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
         {:nombre => 'Gregory',:email => 'jurado2@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-        {:nombre => 'Micaëla',:email => 'jurado3@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'}
+        {:nombre => 'Yisela',:email => 'jurado3@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+        {:nombre => 'Dr. Pepito',:email => 'admin@estudio.com', :password => "clave12345", :password_confirmation => "clave12345", :tipo => '1', :habilitado => 'true'}
   	 ]
 
 users.each do |user|
@@ -30,9 +30,9 @@ projects = [{:name => 'DeRoche c/ Ramon s/ indemnización por despido EXP N°111
          {:name => 'DeRoche c/ SuMujer s/ divorsio EXP N°112000',:judicial_record_number => 'EXP N°112000', :court => '1', :customer_id => '1'},
          {:name => 'Gregorio c/ Ramon s/ indemnización por despido EXP N°0976',:judicial_record_number => 'EXP N°0976', :court => '1', :customer_id => '3'},
          {:name => 'Ramon c/ Gregory s/ indemnización por despido EXP N°17458',:judicial_record_number => 'EXP N°17458', :court => '1', :customer_id => '4'},
-         {:name => 'Gregory c/ Micaëla s/ indemnización por acoso sexual EXP N°89775',:judicial_record_number => 'EXP N°89775', :court => '1', :customer_id => '5'},
-         {:name => 'Micaëla c/ Codito s/ falta de pago honorarios EXP N°49485',:judicial_record_number => 'EXP N°49485', :court => '1', :customer_id => '6'},
-         {:name => 'Micaëla c/ SuMujer s/ divorsio EXP N°112002',:judicial_record_number => 'EXP N°112002', :court => '1', :customer_id => '6'}
+         {:name => 'Gregory c/ Micaëla s/ indemnización por acoso sexual EXP N°89775',:judicial_record_number => 'EXP N°89775', :court => '1', :customer_id => '6'},
+         {:name => 'Micaëla c/ Codito s/ falta de pago honorarios EXP N°49485',:judicial_record_number => 'EXP N°49485', :court => '1', :customer_id => '5'},
+         {:name => 'Micaëla c/ SuMujer s/ divorsio EXP N°112002',:judicial_record_number => 'EXP N°112002', :court => '1', :customer_id => '5'}
   	 ]
 
 projects.each do |project|

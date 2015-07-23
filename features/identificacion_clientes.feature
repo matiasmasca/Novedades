@@ -2,7 +2,7 @@
 Característica: Indentificacion clientes
     Como un cliente del estudio
     Para poder ver las novedades de mis casos
-    Deseo identificarme en el sistema
+    Deseo identificarme en la aplicación de clientes del estudio
 
 Antecedentes:
   Dado que soy cliente registrado
