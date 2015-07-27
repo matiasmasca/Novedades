@@ -17,6 +17,9 @@
 
   <hr size="1" />
   <h4 align="left">Adjuntos:</h4>
+  <%  if params[:id] && current_user.tipo == 1 %>
+      <%= link_to 'Subir archivo', new_notification_attachment_path(params[:id]), class: "btn btn-default pull-right" %>
+  <% end %>
 
   <table  class="table">
     <thead>
@@ -66,8 +69,8 @@
 
   <hr size="1" />
 
-<%= link_to 'Volver', :back %>
-<%= link_to 'Edit', edit_notification_path(@notification) if current_user.tipo == 1 %>
+<%= link_to 'Volver', :back, class: "btn btn-default" %>
+<%= link_to 'Edit', edit_notification_path(@notification), class: "btn btn-default" if current_user.tipo == 1 %>
 <div>
 
   <% breadcrumb :notification, @notification %>

@@ -1,7 +1,11 @@
 <% if current_user.habilitado? %>
-  <div>Bienvenido <strong><%= current_user.nombre %></strong> - Cliente.</div>
-  <div> Podes ver tus novedades haciendo click en <%= link_to ' Casos', projects_path, class: "fa fa-book" %> </div>
-  <div><br></div>
+  <div>Bienvenido <strong><%= current_user.nombre %></strong></div>
+  <% if current_user.tipo == 2 %>
+    <div> Podes ver tus novedades haciendo click en <%= link_to ' Casos', projects_path, class: "fa fa-book" %> </div>
+    <% else %>
+    <h3> Usuario Admin. </h3>
+  <% end %>
+  <br>
   <div>Identificado: <strong><%= current_user.email %></strong>.</div>
   <div><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></div>
 

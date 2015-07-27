@@ -1,5 +1,8 @@
 <div class="container-fluid">
-<h2>Lista de Casos</h2>
+  <div class="form-group">
+   <h2>Lista de Casos</h2>
+    <%= link_to ' Nuevo caso', new_project_path, class: "btn btn-primary fa fa-folder-o pull-right" if current_user.tipo == 1 %>
+  </div>
 <table id="projects-list" class="table">
   <thead>
     <tr>
@@ -34,7 +37,5 @@
 <h4><%= "Casos de:" + current_user.nombre if current_user.tipo == 2 %></h4>
 </div>
 <br>
-<div class="form-group">
-<%= link_to ' Nuevo caso', new_project_path, class: "btn btn-primary fa fa-folder-o" if current_user.tipo == 1 %>
-</div>
+
 <% breadcrumb :projects %>

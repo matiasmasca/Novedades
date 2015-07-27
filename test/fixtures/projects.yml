@@ -2,8 +2,12 @@
 
 one:
   name: MyString
-  customer_id: 
+  customer_id: users(:user1).id
+  judicial_record_number: 100100
+  court:  1
 
 two:
   name: MyString
-  customer_id: 
+  customer_id: users(:user1).id
+  judicial_record_number: 100101
+  court:  2

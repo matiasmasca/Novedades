@@ -47,5 +47,11 @@ Dado(/^completo mi email "(.*?)" y contraseña "(.*?)"$/) do |correo, clave|
   # Esto es para evitar el Ambiguous match
   fill_in('user_email', with: "#{correo}", :match => :prefer_exact)
   fill_in('user_password', with: "#{clave}", :match => :prefer_exact)
+  save_and_open_page
   click_button "Ingresar"
+end
+
+Dado(/^que la novedad tiene (\d+) adjunto$/) do |arg1, table|
+  # table is a Cucumber::Ast::Table
+  pending # express the regexp above with the code you wish you had
 end

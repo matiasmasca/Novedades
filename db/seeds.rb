@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 users = [{:nombre => 'DeRoche',:email => 'don@deroche.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
     	  {:nombre => 'Gregorio hobbit',:email => 'dostorres@hobbit.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
-     	  {:nombre => 'Gregorio Itaca',:email => 'examples@itaca.mx',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
+     	  {:nombre => 'Jazmin Itaca',:email => 'examples@itaca.mx',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'false'},
      	  {:nombre => 'Ramon Go',:email => 'unemail1@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
      	  {:nombre => 'Micaëla',:email => 'unemail2@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-     	  {:nombre => 'Gregorio',:email => 'unemail3@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-     	  {:nombre => 'Gregorio',:email => 'unemail4@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-     	  {:nombre => 'Gregorio',:email => 'unemail5@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
-        {:nombre => 'Gregorio',:email => 'jurado1@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+     	  {:nombre => 'Lucas',:email => 'unemail3@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+     	  {:nombre => 'Pedro',:email => 'unemail4@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+     	  {:nombre => 'Pablo',:email => 'unemail5@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
+        {:nombre => 'Paulo',:email => 'jurado1@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
         {:nombre => 'Gregory',:email => 'jurado2@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
         {:nombre => 'Yisela',:email => 'jurado3@go.com',:password => "clave12345", :password_confirmation => "clave12345", :tipo => '2', :habilitado => 'true'},
         {:nombre => 'Dr. Pepito',:email => 'admin@estudio.com', :password => "clave12345", :password_confirmation => "clave12345", :tipo => '1', :habilitado => 'true'}

@@ -1,5 +1,6 @@
 class AttachmentsController < ApplicationController
   before_action :set_attachment, only: [:show, :edit, :update, :destroy]
+  before_action :set_notification, only: [:edit, :new]
 
   # GET /attachments
   # GET /attachments.json
@@ -14,6 +15,7 @@ class AttachmentsController < ApplicationController
 
   # GET /attachments/new
   def new
+
     @attachment = Attachment.new
   end
 
@@ -66,6 +68,10 @@ class AttachmentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_attachment
       @attachment = Attachment.find(params[:id])
+    end
+
+    def set_notification
+      @notification = Notification.find(params[:notification_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -11,18 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :notification_id %><br>
-    <%= f.text_field :notification_id %>
+  <div class="form-group">
+    <%= f.label :notification_id, "Título novedad: ", class: 'control-label' %><br>
+    <% if params[:notification_id] %>
+      <div class="form-group">
+        <%= @notification.title %>
+        <br> <h4>Del caso:</h4>
+        <%= @notification.project.name %>
+        <%= f.hidden_field :notification_id, class: 'form-control' %>
+      </div>
+    <% else%>
+      <%= f.text_field :notification_id, class: "form-control" %>
+    <% end %>
+    <hr size="1" />
   </div>
 
-  <div class="field">
+  <div class="form-group">
+    <%= f.label :title, "Titulo adjunto" %><br>
+    <%= f.text_field :title, placeholder: "ingrese un título descriptivo del archivo.", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :profile_image, "Archivos Adjuntos" %><br>
-    <%= f.attachment_field :profile_image %>
+    <%= f.attachment_field :profile_image, class: "form-control" %>
 
     <% if @attachment.profile_image_id? %>
       <%= image_tag attachment_url(@attachment, :profile_image, :fill, 100, 100) %>
@@ -31,8 +42,9 @@
       <%= f.label :remove_profile_image %>
     <% end %>
   </div>
-
+  <div class="form-group">
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Guardar', class: 'btn btn-primary' %>
   </div>
+</div>
 <% end %>

@@ -28,7 +28,7 @@ module ProjectsHelper
     ['JUZGADO DE PAZ N° 1', '19', { 'data-size' => '' }],
     ['JUZGADO DE PAZ N° 2', '20', { 'data-size' => '' }]
   ]
-)
+    )
   end
 
   def court_name(nro)
@@ -52,8 +52,6 @@ module ProjectsHelper
     'JUZGADO DE FAMILIA N° 3',
     'JUZGADO DE PAZ N° 1',
     'JUZGADO DE PAZ N° 2']
-
     courts[nro]
-
   end
 end

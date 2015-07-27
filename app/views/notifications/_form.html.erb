@@ -13,9 +13,19 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :project_id, "Caso ID", class: 'control-label' %><br>
-    <%= f.text_field :project_id, placeholder: "ingrese ID del caso.", class: "form-control" %>
+    <%= f.label :project_id, "Caso: ", class: 'control-label' %><br>
+    <% if params[:id] %>
+      <div class="form-group">
+        <%= @projects.name %>
+        <%= f.hidden_field :project_id, class: 'form-control' %>
+      </div>
+    <% else%>
+    <%= f.select :project_id, options_for_select(@projects.collect { |project|
+      [project.name, project.customer_id] }, 0), {prompt: 'Seleccione un Caso'}, { class: "form-control", id: 'project_select' } %>
+    <% end %>
+    <hr size="1" />
   </div>
+
   <div class="form-group">
     <%= f.label :title, "Titulo novedad:", class: 'control-label' %><br>
     <%= f.text_field :title, placeholder: "ingrese el título de la novedad.", class: "form-control" %>

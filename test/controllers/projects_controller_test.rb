@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
+
   setup do
+    @request.env["devise.mapping"] = Devise.mappings[:user1]
     @project = projects(:one)
   end
 

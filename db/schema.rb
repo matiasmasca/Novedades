@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20150721954846) do
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.integer  "customer_id"
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.string   "judicial_record_number", default: "EXP.N° "
     t.integer  "court",                  default: 0
   end

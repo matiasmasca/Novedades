@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  project_id: 
+  project_id: projects(:one).id
   title: MyString
   date: 2015-07-08
   message: MyText
+  read_mark: false
 
 two:
-  project_id: 
+  project_id: projects(:one).id
   title: MyString
   date: 2015-07-08
   message: MyText
+  read_mark: false

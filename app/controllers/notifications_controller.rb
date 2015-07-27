@@ -1,5 +1,6 @@
 class NotificationsController < ApplicationController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
+  before_action :set_customers, only: [:edit, :new]
 
   # GET /notifications
   # GET /notifications.json
@@ -28,13 +29,13 @@ class NotificationsController < ApplicationController
     #@proyects = Project.where("customer_id = ?", Project.first.id)
     @projects = Project.all
 
-    #User.includes("projects").where(projects: {customer_id: id})
-    @customers = User.where(tipo: 2)
+
     #raise 'Ouch!'
   end
 
   # GET /notifications/1/edit
   def edit
+    @projects = @notification.project
   end
 
   # POST /notifications
@@ -90,6 +91,11 @@ class NotificationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_notification
       @notification = Notification.find(params[:id])
+    end
+
+    def set_customers
+      #User.includes("projects").where(projects: {customer_id: id})
+      @customers = User.where(tipo: 2)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

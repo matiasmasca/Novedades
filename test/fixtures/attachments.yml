@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  news_id: 
+  notification_id: notifications(:one).id
 
 two:
   title: MyString
-  news_id: 
+  notification_id: notifications(:one).id

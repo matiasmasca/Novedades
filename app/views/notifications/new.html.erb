@@ -1,18 +1,10 @@
 <h1>Nueva Novedad</h1>
-
 <%= form_for :project do |f| %>
   <%= f.label :customer_id, "Cliente: ", class: 'control-label' %><br>
   <%= f.select :customer_id, options_for_select(@customers.collect { |user|
     [user.nombre, user.id] }, 0), {prompt: 'Seleccione un Cliente'}, { class: "form-control", id: 'customer_select' } %>
     <hr size="1" />
-
-  <%= f.label :project_id, "Caso: ", class: 'control-label' %><br>
-  <%= f.select :project_id, options_for_select(@projects.collect { |project|
-    [project.name, project.customer_id] }, 0), {prompt: 'Seleccione un Caso'}, { class: "form-control", id: 'project_select' } %>
 <% end %>
-
-<hr size="1" />
-
 <%= render 'form' %>
 
 <h3> Archivos adjuntos: </h3>
