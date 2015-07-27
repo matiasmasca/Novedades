@@ -47,7 +47,7 @@ Dado(/^completo mi email "(.*?)" y contraseña "(.*?)"$/) do |correo, clave|
   # Esto es para evitar el Ambiguous match
   fill_in('user_email', with: "#{correo}", :match => :prefer_exact)
   fill_in('user_password', with: "#{clave}", :match => :prefer_exact)
-  save_and_open_page
+  #save_and_open_page
   click_button "Ingresar"
 end
 
