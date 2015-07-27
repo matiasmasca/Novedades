@@ -5,7 +5,7 @@ class NotificationsController < ApplicationController
   # GET /notifications
   # GET /notifications.json
   def index
-    if current_user.tipo == 2 #Un cliente
+    if current_user.tipo == 2 || ( params[:project_id] && current_user.tipo == 1) #Un cliente
      @notifications = Notification.where(project_id: params[:project_id]).order('date DESC')
      #raise 'Oops'
    else
