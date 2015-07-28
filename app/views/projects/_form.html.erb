@@ -23,12 +23,12 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :judicial_record_number, class: 'control-label' %><br>
+    <%= f.label :judicial_record_number, 'Expediente N°', class: 'control-label' %><br>
     <%= f.text_field :judicial_record_number, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :court, class: 'control-label' %><br>
+    <%= f.label :court, 'Juzgado' , class: 'control-label' %><br>
     <select class="form-control" id="select" name="project[court]">
       <option selected="selected" value="<%= @project.court %>"><%= court_name(@project.court.to_i - 1) %></option>
 

@@ -14,10 +14,15 @@
 
   <div class="form-group">
     <%= f.label :project_id, "Caso: ", class: 'control-label' %><br>
-    <% if params[:id] %>
+    <% if params[:project_id] %>
       <div class="form-group">
-        <%= @projects.name %>
-        <%= f.hidden_field :project_id, class: 'form-control' %>
+        <% if @projects %>
+          <%= @projects.find(params[:project_id]).name  %>
+          <%= f.hidden_field :project_id, :value => params[:project_id], class: 'form-control' %>
+        <% else%>
+          <%= @project.name  %>
+          <%= f.hidden_field :project_id, :value => params[:project_id], class: 'form-control' %>
+        <% end %>
       </div>
     <% else%>
     <%= f.select :project_id, options_for_select(@projects.collect { |project|

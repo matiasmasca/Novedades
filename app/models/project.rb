@@ -13,4 +13,9 @@ class Project < ActiveRecord::Base
       last_update.to_formatted_s(:long)
     end
   end
+
+  def customer_name
+    customer = User.find(self.customer_id)
+    name = customer.nombre
+  end
 end

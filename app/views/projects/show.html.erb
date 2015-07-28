@@ -1,14 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Cliente:</strong>
+  <%= @project.customer_name %>
+</p>
+
+<p>
+  <strong>Carátula Caso:</strong>
   <%= @project.name %>
 </p>
 
 <p>
-  <strong>Customer:</strong>
-  <%= @project.customer_id %>
+  <strong>Expediente N°:</strong>
+  <%= @project.judicial_record_number %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', :back %>
+<p>
+  <strong>Juzgado N°:</strong>
+  <%= court_name(@project.court) %>
+</p>
+
+
+<p>
+  <strong>Última actualización:</strong>
+  <%= @project.last_update %>
+</p>
+
+
+
+<%= link_to 'Editar', edit_project_path(@project), class: "btn btn-default"  if current_user.tipo == 1 %>
+<%= link_to 'Volver', :back, class: "btn btn-default"  %>
+<%= link_to 'Lista Casos', projects_path, class: "btn btn-default"  %>

@@ -1,6 +1,7 @@
 class NotificationsController < ApplicationController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
   before_action :set_customers, only: [:edit, :new]
+  before_action :set_project, only: [:edit, :new]
 
   # GET /notifications
   # GET /notifications.json
@@ -25,17 +26,11 @@ class NotificationsController < ApplicationController
   # GET /notifications/new
   def new
     @notification = Notification.new
-
-    #@proyects = Project.where("customer_id = ?", Project.first.id)
-    @projects = Project.all
-
-
-    #raise 'Ouch!'
   end
 
   # GET /notifications/1/edit
   def edit
-    @projects = @notification.project
+    @project = @notification.project
   end
 
   # POST /notifications
@@ -96,6 +91,14 @@ class NotificationsController < ApplicationController
     def set_customers
       #User.includes("projects").where(projects: {customer_id: id})
       @customers = User.where(tipo: 2)
+    end
+
+    def set_project
+      if params[:project_id]
+        @project = Project.find(params[:project_id])
+      else
+        @projects = Project.all
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

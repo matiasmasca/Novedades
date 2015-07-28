@@ -265,6 +265,11 @@
         1,
         null,
         null,
+        null,
+        1,
+        0,
+        0,
+        null,
         null
       ],
       "/home/mato/Novedades/app/models/notification.rb": [
@@ -294,6 +299,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -320,12 +326,6 @@
         0,
         null,
         null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         0,
@@ -391,6 +391,14 @@
         0,
         null,
         null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
         null,
         1,
         0,
@@ -414,7 +422,7 @@
         null
       ]
     },
-    "timestamp": 1438039087
+    "timestamp": 1438092237
   },
   "MiniTest": {
     "coverage": {

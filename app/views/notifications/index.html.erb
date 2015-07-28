@@ -26,8 +26,8 @@
         <td></span><%= attachment_badge(notification) %><%= notification.archivos_adjuntos %></span></td>
         <td><%= link_to ' Ver más', project_notification_path(notification.project_id, notification.id), class: "btn btn-default fa fa-share" %>
         <% if current_user.tipo == 1 %>
-          <td><%= link_to 'Editar', edit_project_notification_path(notification.project_id,notification.id), class: "btn btn-warning fa fa-pencil", title: 'Editar novedad', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar novedad del caso' }  %></td>
-          <td><%= link_to 'Destroy',  project_notification_path(notification.project_id,notification.id), class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar este caso? \n" + notification.title + ""}  %></td>
+          <td><%= link_to ' Editar', edit_project_notification_path(notification.project_id,notification.id), class: "btn btn-warning fa fa-pencil", title: 'Editar novedad', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar novedad del caso' }  %></td>
+          <td><%= link_to ' Eliminar',  project_notification_path(notification.project_id,notification.id), class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar esta novedad? \n" + notification.title + ""}  %></td>
         <% end %>
       </tr>
     <% end %>

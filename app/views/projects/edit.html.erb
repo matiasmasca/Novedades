@@ -1,6 +1,8 @@
-<h1>Editing Project</h1>
+<h1>Editando Caso</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', :back %>
+<br>
+<div class="form-group">
+  <%= link_to 'Ver caso', @project, title:"Ver datos basicos del caso", class: "btn btn-default" %> |
+  <%= link_to 'Volver', :back, class: "btn btn-default" %>
+</div>
