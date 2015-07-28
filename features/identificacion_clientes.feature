@@ -14,4 +14,4 @@ Escenario: cliente todo bien.
 
 Escenario: cliente usuario deshabilitado.
     Y que el usuario esta "deshabilitado"
-    Entonces veo un mensaje que dice "Su usuario ha sido deshabilitado, por favor comuniquese con el Dr. Cosme Fulanito (mail@mail.com)"
+    Entonces veo un mensaje que dice "Su usuario ha sido deshabilitado, por favor comuniquese con el admistrador (contacto@terciar.ga)."

@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -14,7 +15,7 @@ class ApplicationController < ActionController::Base
       "/projects"
     else
       sign_out(resource)
-      flash[:notice] =  "Su usuario ha sido deshabilitado, por favor comuniquese con el Dr. Cosme Fulanito (mail@mail.com)."
+      flash[:warning] =  "Su usuario ha sido deshabilitado, por favor comuniquese con el admistrador (contacto@terciar.ga)."
       "/"
     end
   end
