@@ -1,39 +1,40 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listando Archivos Adjuntos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Notification</th>
-      <th>attachment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @attachments.each do |attachment| %>
+<div class="container-fluid">
+ <div class="form-group">
+ <h1>Listando Archivos Adjuntos</h1>
+ <%= if params[:notification_id]
+     link_to ' Nuevo adjunto', new_notification_attachment_path, class: "btn btn-primary fa fa-file-o pull-right"
+   end
+ %>
+</div>
+  <table id="attachments-list" class="table table-striped table-hover">
+    <thead>
       <tr>
-        <td><%= attachment.title %></td>
-        <td><%= attachment.notification_id %></td>
-        <td>
-          <% if attachment.profile_image_id? %>
-            <%= link_to image_tag(attachment_url(attachment, :profile_image, :fill, 100, 100)) %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', attachment %></td>
-        <td><%= link_to 'Edit', edit_attachment_path(attachment) %></td>
-        <td><%= link_to 'Destroy', attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Título</th>
+        <th>Novedad</th>
+        <th>Adjunto</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @attachments.each do |attachment| %>
+        <tr>
+          <td><%= attachment.title %></td>
+          <td><%= attachment.notification_id %></td>
+          <td>
+            <% if attachment.profile_image_id? %>
+             <%= link_to image_tag(Refile.attachment_url(attachment, :profile_image), height: '100', width: '100', alt: "#{attachment.profile_image_filename}"), attachment.path %>
+            <% end %>
+          </td>
+          <td><%= link_to ' Ver', notification_attachment_path(attachment.notification_id, attachment), class: "btn btn-default fa fa-share" %></td>
+          <td><%= link_to ' Editar', edit_notification_attachment_path(attachment.notification_id, attachment), class: "btn btn-warning fa fa-pencil", title: 'Editar adjunto', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar adjunto de novedad'} %></td>
+          <td><%= link_to ' Eliminar', attachment, class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar este archivo? \n" + attachment.title + ""}  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <br>
+<%= link_to 'Volver', :back, class: "btn btn-default" %>
+<%= link_to 'Volver a novedad', notification_path(params[:notification_id]), class: "btn btn-default" if current_user.tipo == 1 && params[:notification_id]%>
 
-<%=
-if params[:notification_id]
-    link_to 'New Attachment', new_notification_attachment_path
-end
-%>
+</div>

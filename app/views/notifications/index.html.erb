@@ -2,8 +2,7 @@
 <div class="form-group">
  <h2>Listando Novedades</h2>
  <%= link_to ' Nueva Novedad', new_notification_path, class: "btn btn-primary fa fa-newspaper-o pull-right" unless params[:project_id] || current_user.tipo == 2 %>
-
-  <%= link_to ' Nueva Novedad', new_project_notification_path, title: "Nueva novedad para el caso seleccionado." , class: "btn btn-primary fa fa-folder-o pull-right" if params[:project_id] && current_user.tipo == 1 %>
+ <%= link_to ' Nueva Novedad', new_project_notification_path, title: "Nueva novedad para el caso seleccionado." , class: "btn btn-primary fa fa-folder-o pull-right" if params[:project_id] && current_user.tipo == 1 %>
 </div>
 <% @project =  Project.find_by_id(params[:project_id]) %>
 <h2><%= @project.name if @project  %></h2>

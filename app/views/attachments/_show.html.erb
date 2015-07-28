@@ -15,7 +15,7 @@
 
   <p>
     <strong>Tamaño del archivo:</strong>
-    <%= @attachment.profile_image_size / 1024 %> Kb
+    <%= @attachment.profile_image_size / 1024 if @attachment.profile_image_size %> Kb
   </p>
   <p>
     <strong>Detalle archivo:</strong>

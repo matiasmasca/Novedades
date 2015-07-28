@@ -5,7 +5,12 @@ class AttachmentsController < ApplicationController
   # GET /attachments
   # GET /attachments.json
   def index
-    @attachments = Attachment.all
+    if current_user.tipo == 2 || ( params[:notification_id] && current_user.tipo == 1) #Un cliente
+     @attachments = Attachment.where(notification_id: params[:notification_id]).order('created_at DESC')
+     #raise 'Oops'
+   else
+     @attachments = Attachment.all.order('created_at DESC')
+   end
   end
 
   # GET /attachments/1
@@ -15,7 +20,6 @@ class AttachmentsController < ApplicationController
 
   # GET /attachments/new
   def new
-
     @attachment = Attachment.new
   end
 
@@ -71,7 +75,8 @@ class AttachmentsController < ApplicationController
     end
 
     def set_notification
-      @notification = Notification.find(params[:notification_id])
+      @notification = Notification.find(params[:notification_id]) if params[:notification_id]
+      @notification = Notification.find(@attachment.notification_id) if @attachment
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

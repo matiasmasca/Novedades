@@ -2,7 +2,6 @@
   <% if @attachment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@attachment.errors.count, "error") %> prohibited this attachment from being saved:</h2>
-
       <ul>
       <% @attachment.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -18,10 +17,11 @@
         <%= @notification.title %>
         <br> <h4>Del caso:</h4>
         <%= @notification.project.name %>
-        <%= f.hidden_field :notification_id, class: 'form-control' %>
+        <%= f.hidden_field :notification_id, value: params[:notification_id], class: 'form-control' %>
       </div>
     <% else%>
-      <%= f.text_field :notification_id, class: "form-control" %>
+      <%= @notification.title %>
+      <%= f.hidden_field :notification_id, value: @notification.id, class: "form-control" %>
     <% end %>
     <hr size="1" />
   </div>

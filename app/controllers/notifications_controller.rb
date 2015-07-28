@@ -31,6 +31,7 @@ class NotificationsController < ApplicationController
   # GET /notifications/1/edit
   def edit
     @project = @notification.project
+    params[:project_id] = @project.id
   end
 
   # POST /notifications

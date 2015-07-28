@@ -3,5 +3,6 @@
 <!--/show attach -->
 
 
-<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
-<%= link_to 'Back', :back %>
+<%= link_to 'Editar', edit_attachment_path(@attachment), class: "btn btn-default" %> |
+<%= link_to 'Lista Adjuntos', notification_attachments_path(@attachment.notification_id), class: "btn btn-default" %> |
+<%= link_to 'Volver', :back, class: "btn btn-default" %>
