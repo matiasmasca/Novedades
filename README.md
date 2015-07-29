@@ -1,13 +1,13 @@
 ***Novedades***
 ===
-Repositorio para la edición comunitaria (software libre) de "Novedades", una aplicación web para mantener informados a sus clientes sobre las novedes que hay sobre sus casos/proyectos.
+Repositorio para la edición comunitaria (software libre) de "Novedades", una aplicación web para mantener informados a sus clientes sobre las novedades que hay en sus casos/proyectos.
 
-Ha ser desarrollada con Ruby on Rails.
+Es desarrollada con Ruby on Rails.
 
-El alcance del proyecto es: sus clientes se identifican y ven un listado de casos con un indicador de novedades para cada caso. Al seleccionar un caso acceden al listado de novedades y seleccionan una novedad para ver su contenido..
+El alcance del proyecto es: sus clientes se identifican y ven un listado de casos con un indicador de novedades para cada caso. Al seleccionar un caso acceden al listado de novedades y seleccionan una novedad para ver su contenido. Cada novedad puede tener varios archivos adjuntos. Cuando se crea una novedad se le envia un email al cliente invitandolo a conectarse al sistema para ver de que se trata.
 
 **El Origen.**
-Encargado por un cliente en particular, trantando de convencerlo de hacerlo como Softwar Libre.
+Encargado por un cliente en particular, trantando de convencerlo de hacerlo como Software Libre.
 
 Toda contribución (sugerencias de cambio), consejo, critica constructiva, consultas son bienvenidas.
 
@@ -49,10 +49,10 @@ Licencia:
 ===========
 
 * Ruby version:
-    ruby
+    ruby 2.2
 
 * Rails version:
-    rails
+    rails 4.2.1
 
 * System dependencies:
     mirar el archivo gemfile
@@ -82,19 +82,17 @@ Licencia:
 
 * Deployment instructions:
   - cambiar el token ejecutando: rake secret
-  - Crear las variables de entorno:
+  - Deberá crear las siguentes variables de entorno en su servidor:
     * COVERALL
     * DATABASE_NAME
     * DATABASE_USER
     * DATABASE_PASS
     * DATABASE_URL
-    * FB_App_id
-    * FB_App_secret
+    * EMAIL_HOST
+    * EMAIL_USER_NAME
+    * EMAIL_USER_PASS
     * HEROKU_POSTGRESQL_VIOLET_URL
-    * loaderio
     * SECRET_KEY_BASE para el secret token
-    * TW_Consumer_key
-    * TW_Consumer_secret
 
   - cambiar los .yml de Travis y de Coveralls.
 
