@@ -2,16 +2,18 @@ Tiene una Nueva novedad en su caso: <%= @project.name %>
 ===============================================
 
 Estimado <%= @customer.nombre %>,
-por este medio le informamos que hay una nueva novedad en su caso
-y puede consultarla desde nuestra aplicación exclusiva para nuestros clientes.
+por este medio le informamos que hay una nueva novedad en su caso "<%= @project.name %>"
+y puede consultarla desde nuestra aplicación exclusiva para clientes del estudio.
 
 Le recordamos que su nombre de usuario es: <%= @customer.email %>.
 
-Una vez vista, puede marcarla como leída.
+Una vez visto el mensaje puede marcarlo como leído, presionando el botón correspondiente.
 
-Para ver la novedad, siga este enlace: <%= @url %>.
+Para ver la novedad, siga este enlace:
+<%= @url %>.
 
+<%= @url_dev %>.
 Titulo: <%= @notification.title %>
-Mensaje: <%= @notification.message %> 
+Mensaje: <%= @notification.message %>
 
 Gracias por confiar en nuestro estudio, que tenga un buen día.

@@ -30,7 +30,7 @@ projects = [{:name => 'DeRoche c/ Ramon s/ indemnización por despido EXP N°111
          {:name => 'DeRoche c/ SuMujer s/ divorsio EXP N°112000',:judicial_record_number => 'EXP N°112000', :court => '1', :customer_id => '1'},
          {:name => 'Gregorio c/ Ramon s/ indemnización por despido EXP N°0976',:judicial_record_number => 'EXP N°0976', :court => '1', :customer_id => '3'},
          {:name => 'Ramon c/ Gregory s/ indemnización por despido EXP N°17458',:judicial_record_number => 'EXP N°17458', :court => '1', :customer_id => '4'},
-         {:name => 'Gregory c/ Micaëla s/ indemnización por acoso sexual EXP N°89775',:judicial_record_number => 'EXP N°89775', :court => '1', :customer_id => '6'},
+         {:name => 'Luca c/ Micaëla s/ indemnización por acoso sexual EXP N°89775',:judicial_record_number => 'EXP N°89775', :court => '1', :customer_id => '6'},
          {:name => 'Micaëla c/ Codito s/ falta de pago honorarios EXP N°49485',:judicial_record_number => 'EXP N°49485', :court => '1', :customer_id => '5'},
          {:name => 'Micaëla c/ SuMujer s/ divorsio EXP N°112002',:judicial_record_number => 'EXP N°112002', :court => '1', :customer_id => '5'}
   	 ]
