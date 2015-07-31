@@ -1,7 +1,7 @@
 class NotificationMailer < ApplicationMailer
   default from: 'contacto@terciar.ga'
 
-  def new_notifition_email(project)
+  def new_notification_email(project)
     @customer = User.find(project.customer_id)
     @project = project
     @url  = "terciar-novedades.herokuapp.com/projects/#{@project.id}/notifications/"

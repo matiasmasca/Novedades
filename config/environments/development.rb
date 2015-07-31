@@ -20,11 +20,11 @@ Rails.application.configure do
   #config.action_mailer.perform_deliveries = true #Para que envie, por defecto es false.
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.terciar.ga',
+    address:              ENV['EMAIL_HOST'],
     port:                 587,
     domain:               'terciar.ga',
-    user_name:            '<username>',
-    password:             '<password>',
+    user_name:            ENV['EMAIL_USER_NAME'],
+    password:             ENV['EMAIL_USER_PASS'],
     authentication:       'plain',
     enable_starttls_auto: true  }
 
