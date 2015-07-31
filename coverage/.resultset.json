@@ -12,18 +12,28 @@
       "/home/mato/Novedades/app/controllers/application_controller.rb": [
         1,
         1,
-        null,
-        null,
+        1,
         1,
         null,
         null,
         1,
         null,
+        null,
         1,
+        null,
+        1,
+        null,
+        110,
+        null,
+        null,
+        null,
+        1,
+        null,
         null,
         1,
         11,
         10,
+        null,
         10,
         null,
         1,
@@ -179,10 +189,10 @@
         null,
         null,
         1,
-        23,
+        13,
         0,
         null,
-        23,
+        13,
         null,
         null,
         null,
@@ -430,7 +440,7 @@
         null
       ]
     },
-    "timestamp": 1438347319
+    "timestamp": 1438380320
   },
   "MiniTest": {
     "coverage": {

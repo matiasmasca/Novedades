@@ -18,7 +18,6 @@ class ApplicationController < ActionController::Base
   protected
 
   # A donde va cuando inicia la sesión.
-
   def after_sign_in_path_for(resource)
     if current_user.habilitado?
       flash[:notice] = "Bienvenido #{current_user.nombre} - Cliente."
