@@ -44,6 +44,9 @@ class NotificationsController < ApplicationController
 
     respond_to do |format|
       if @notification.save
+        # Tell the NotificationMailer to send a notification email after save
+        NotificationMailer.new_notifition_email(@project).deliver_now
+
         format.html { redirect_to @notification, notice: 'Notification was successfully created.' }
         format.json { render :show, status: :created, location: @notification }
       else
