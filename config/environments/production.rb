@@ -73,7 +73,8 @@ Rails.application.configure do
     password:             ENV['EMAIL_USER_PASS'],
     authentication:       'plain',
     enable_starttls_auto: true,
-    openssl_verify_mode:  'none'  }
+    openssl_verify_mode:  'none' } #TO-DO: openssl_verify_mode ojo con esto que quita la comprobación del certificado de OpenSSL
+
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
