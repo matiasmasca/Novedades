@@ -28,7 +28,8 @@ Rails.application.configure do
     user_name:            ENV['EMAIL_USER_NAME'],
     password:             ENV['EMAIL_USER_PASS'],
     authentication:       'plain',
-    enable_starttls_auto: true  }
+    enable_starttls_auto: true,
+    openssl_verify_mode:  'none'  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
