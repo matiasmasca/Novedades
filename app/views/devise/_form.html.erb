@@ -1,0 +1,42 @@
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :email, "Dirección de correo electrónico", class: 'control-label' %><br>
+    <%= f.text_field :email,  class: "form-control", size: "10", maxlength: "110", placeholder: "Ingrese una dirección de correo electrónico valida, nos comunicaremos con usted por ese medio." %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password, "Clave de acceso", class: 'col-sm-2 control-label'  %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirme su clave de acceso",class: 'col-sm-2 control-label' %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :nombre, "Nombre/s", class: 'control-label' %><br>
+    <%= f.text_field :nombre,  class: "form-control", size: "10", maxlength: "110", placeholder: "Ingrese su nombre o nombres, para personalizar algunas partes del sistema." %>
+  </div>
+ 
+  <div class="form-group">
+    <% tipos_usuarios = {'Cliente'=> '1', 'Administrador'=> '2'} %>
+    <%= f.label :tipo, "Tipo Usuario" , class: 'control-label' %><br>
+    <%= f.select :tipo, tipos_usuarios, selected: @user.tipo, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Guardar cambios', class: 'btn btn-primary' %>
+  </div>
+<% end %>

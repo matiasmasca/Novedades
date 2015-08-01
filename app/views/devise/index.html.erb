@@ -1,5 +1,8 @@
-<h1>Lista de Usuarios</h1>
-
+<div class="form-group">
+  <h1>Lista de Usuarios</h1>
+  <%= link_to ' Registrar Usuario', new_user_path, class: 'btn btn-primary fa fa-user' %>
+</div>
+<br>
 <div class="table-responsive">
   <table id="users-list" class="table table-striped table-hover table-condensed">
   <thead>
@@ -21,9 +24,9 @@
         <td><%= user.email %></td>
         <td><%= user.tipo %></td>
         <td><%= user.habilitado %></td>
-        <td><%= link_to 'Mostrar', user, :class => 'btn btn-default btn-xs' %></td>
-        <td><%= link_to 'Editar', edit_user_path(user), :class => 'btn btn-default btn-xs' %></td>
-        <td><%= link_to 'Eliminar', user, :class => 'btn btn-danger btn-xs', :method => :delete, data: { confirm: "Esta seguro que desea borrar este usuario: #{user.nombre}?"} %></td>
+        <td><%= link_to 'Mostrar', user, class: 'btn btn-default fa fa-share' %></td>
+        <td><%= link_to 'Editar', edit_user_path(user), class: 'btn btn-warning fa fa-pencil' %></td>
+        <td><%= link_to 'Eliminar', user, class: 'btn btn-danger fa fa-trash-o', method: :delete, data: { confirm: "Esta seguro que desea borrar este usuario: #{user.nombre}?"} %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,5 +34,3 @@
 
 </div>
 <br>
-
-<%= link_to 'Registrar Usuario', new_user_path, :class => 'btn btn-primary' %>

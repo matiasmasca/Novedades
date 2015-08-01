@@ -1,16 +1,7 @@
-<p>
-  <strong>Usuario:</strong>
-  <%= @user.usuario %>
-</p>
 
 <p>
   <strong>Nombre:</strong>
   <%= @user.nombre %>
-</p>
-
-<p>
-  <strong>Apellido:</strong>
-  <%= @user.apellido %>
 </p>
 
 <p>
@@ -19,32 +10,21 @@
 </p>
 
 <p>
-  <strong>Facebook:</strong>
-  <%= @user.facebook %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @user.twitter %>
+  <strong>Habilitado:</strong>
+  <%= @user.habilitado %>
 </p>
 
 <p>
   <strong>Tipo usuario:</strong>
-  <%= @user.tipo_usuario_id %>
+  <%= @user.tipo %>
 </p>
 
 <% #Si es admini, mostrar los otros datos de Devise. %>
-<% if user_signed_in? && current_user.tipo_usuario_id == 1  %>
+<% if user_signed_in? && current_user.tipo == 1  %>
 
 <% end %>
 
-<% unless @user.organizer(true).nil? %>
-      <h3>Organizaciones </h3>
-      <ol class="organizer">
-        <%= render 'misorganizaciones' %>
-      </ol>
-<% end %>
 
-<%= link_to 'Editar Perfil',edit_user_registration_path, :class => 'btn btn-link' %> |
-<%= link_to 'Atrás', :back, :class => 'btn btn-link btn glyphicon glyphicon-arrow-left' %>
+<%= link_to 'Editar Usuario',edit_user_registration_path, :class => 'btn btn-default' %> |
+<%= link_to 'Atrás', :back, :class => 'btn btn-default' %>
 

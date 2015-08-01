@@ -17,15 +17,27 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+  	respond_to do |format|
+        format.html { render 'devise/show' }
+        format.json { render 'devise/show' }
+    end
   end
 
   # GET /users/new
   def new
     @user = User.new
+    respond_to do |format|
+        format.html { render 'devise/new' }
+        format.json { render 'devise/new' }
+    end
   end
 
   # GET /users/1/edit
   def edit
+  	respond_to do |format|
+        format.html { render 'devise/edit' }
+        format.json { render 'devise/edit' }
+    end
   end
 
   # POST /users
@@ -38,7 +50,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @user , notice: 'Usuario registrado correctamente.' }
         format.json { render 'devise/show' , status: :created, location: @user }
       else
-        format.html { render 'devise/registration/new' }
+        format.html { render 'devise/new' }
         format.json { render json: @user.errors , status: :unprocessable_entity }
       end
     end
@@ -58,7 +70,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @user , notice: 'Información actualizada correctamente.' }
         format.json { head :no_content }
       else
-        format.html { render 'devise/registration/edit' }
+        format.html { render 'devise/edit' }
         format.json { render json: @user.errors , status: :unprocessable_entity }
       end
     end
