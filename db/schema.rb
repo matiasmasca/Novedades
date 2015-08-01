@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20150721954846) do
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.string   "nombre"
-    t.integer  "tipo",                   default: 1,    null: false
+    t.integer  "tipo",                   default: 2,    null: false
     t.boolean  "habilitado",             default: true
   end
 
