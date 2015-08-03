@@ -48,11 +48,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
   def is_owner
     return false unless current_user
 
-    # logger.info(@current_user.is_admin?)
+    # logger.info(current_user.is_admin?)
     return true if current_user.is_admin?
 
     if current_user.tipo.nil?
@@ -89,7 +88,7 @@ class ApplicationController < ActionController::Base
   def security_exit
       respond_to do |format|
       format.html do
-         redirect_to(root_path, alert: 'Acceso denegado.')
+         redirect_to(root_path, alert: 'Acceso denegado para su usuario.')
          return false
       end
     end

@@ -11,9 +11,9 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :customer_id, "Cliente", class: 'control-label' %><br>
+    <%= f.label :user_id, "Cliente", class: 'control-label' %><br>
     <% users_array = User.all.where(tipo: 2).map { |user| [user.nombre, user.id] } %>
-    <%= f.select(:customer_id, users_array, {prompt: 'Seleccione un Cliente', selected: @project.customer_id}, class: "form-control", id: "customer_select" )  %>
+    <%= f.select(:user_id, users_array, {prompt: 'Seleccione un Cliente', selected: @project.user_id}, class: "form-control", id: "customer_select" )  %>
   </div>
 
 
