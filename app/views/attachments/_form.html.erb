@@ -27,21 +27,23 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :title, "Titulo adjunto" %><br>
+    <%= f.label :title, "Titulo adjunto", class: 'control-label' %><br>
     <%= f.text_field :title, placeholder: "ingrese un título descriptivo del archivo.", class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :profile_image, "Archivos Adjuntos" %><br>
-    <%= f.attachment_field :profile_image, class: "form-control" %>
+    <%= f.label :profile_image, "Archivos Adjuntos", class: 'control-label' %><br>
+    <div class="input-group-btn">
+      <%= f.attachment_field :profile_image, type: "file", class: "file-input-wrapper btn btn-default" %>
+    </div>
+  </div>
 
+  <div>
     <% if @attachment.profile_image_id? %>
-      <%= image_tag attachment_url(@attachment, :profile_image, :fill, 100, 100) %>
-
-      <%= f.check_box :remove_profile_image %>
-      <%= f.label :remove_profile_image %>
+      <%= link_to image_tag(Refile.attachment_url(@attachment, :profile_image), height: '300', width: '300', alt: "#{@attachment.profile_image_filename}"), @attachment.path %>
     <% end %>
   </div>
+  <br>
   <div class="form-group">
   <div class="actions">
     <%= f.submit 'Guardar', class: 'btn btn-primary' %>

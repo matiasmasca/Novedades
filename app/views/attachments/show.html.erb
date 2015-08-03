@@ -4,5 +4,6 @@
 
 
 <%= link_to 'Editar', edit_attachment_path(@attachment), class: "btn btn-default" %> |
+<%= link_to 'Volver a novedad', notification_path(@attachment.notification_id), class: "btn btn-default" if current_user.tipo == 1 %>
 <%= link_to 'Lista Adjuntos', notification_attachments_path(@attachment.notification_id), class: "btn btn-default" %> |
 <%= link_to 'Volver', :back, class: "btn btn-default" %>

@@ -12,8 +12,9 @@ Una vez visto el mensaje puede marcarlo como leído, presionando el botón corre
 Para ver la novedad, siga este enlace:
 <%= @url %>.
 
-<%= @url_dev %>.
-Titulo: <%= @notification.title %>
-Mensaje: <%= @notification.message %>
-
+<% if Rails.env.development? %>
+  <%= @url_dev %>.
+  Titulo: <%= @notification.title %>
+  Mensaje: <%= @notification.message %>
+<% end %>
 Gracias por confiar en nuestro estudio, que tenga un buen día.
