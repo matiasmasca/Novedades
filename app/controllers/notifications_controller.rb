@@ -81,7 +81,7 @@ class NotificationsController < ApplicationController
   end
 
   def update_project
-      @projects = Project.where("customer_id = ?", params[:customer_id])
+      @projects = Project.where("user_id = ?", params[:user_id])
       respond_to do |format|
         format.js
       end
@@ -94,7 +94,7 @@ class NotificationsController < ApplicationController
     end
 
     def set_customers
-      #User.includes("projects").where(projects: {customer_id: id})
+      #User.includes("projects").where(projects: {user_id: id})
       @customers = User.where(tipo: 2)
     end
 
@@ -108,6 +108,6 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.require(:notification).permit(:project_id, :title, :date, :message, :customer_id)
+      params.require(:notification).permit(:project_id, :title, :date, :message, :user_id)
     end
 end

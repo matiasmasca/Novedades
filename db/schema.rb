@@ -40,14 +40,14 @@ ActiveRecord::Schema.define(version: 20150721954846) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
-    t.integer  "customer_id"
+    t.integer  "user_id"
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
     t.string   "judicial_record_number", default: "EXP.N° "
     t.integer  "court",                  default: 0
   end
 
-  add_index "projects", ["customer_id"], name: "index_projects_on_customer_id"
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",   null: false

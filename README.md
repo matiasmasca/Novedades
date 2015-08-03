@@ -12,10 +12,7 @@ Encargado por un cliente en particular, trantando de convencerlo de hacerlo como
 Toda contribución (sugerencias de cambio), consejo, critica constructiva, consultas son bienvenidas.
 
 **Herramientas**.
-  - Para las Historias de Usuario se utilizará: **PivotalTracker**
   - Para BDD, se utiliza: **Cucumber**, **Capybara**.
-  - Para TDD, se utiliza: **RSpec**.
-  - Para probar continuamente, se utiliza: **Guard**
   - Para la Integración Continua: **Travis-ci**
   - Para el deploy, el servicio de hosting: **Heroku**
 
@@ -41,6 +38,9 @@ CodeReview - TODOs:
 Heroku App - Demo:
     ![Heroku](http://heroku-badge.herokuapp.com/?app=terciar-novedades)
 - https://terciar-novedades.herokuapp.com/
+- Usuario: don@deroche.com pass: clave12345
+- Usuario: admin@estudio.com pass: clave12345
+- Esta DEMO se resetea sin aviso previo, ya que es sólo para pruebas.
 
 Licencia:
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)

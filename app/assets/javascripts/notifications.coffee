@@ -7,7 +7,7 @@ $ ->
       type: 'GET'
       dataType: 'script'
       data: {
-        customer_id: $("#customer_select option:selected").val()
+        user_id: $("#customer_select option:selected").val()
       }
       error: (jqXHR, textStatus, errorThrown) ->
         console.log("AJAX Error: #{textStatus}")

@@ -1,8 +1,8 @@
 class Project < ActiveRecord::Base
-  belongs_to :customer, autosave: true
   belongs_to :user, autosave: true
   has_many :notifications, inverse_of: :project, dependent: :destroy
-  #read_mark
+
+
   def news_count
     news_count = Notification.where(project_id: self.id, read_mark: false).count
   end
@@ -15,7 +15,7 @@ class Project < ActiveRecord::Base
   end
 
   def customer_name
-    customer = User.find(self.customer_id)
+    customer = User.find(self.user_id)
     name = customer.nombre
   end
 end

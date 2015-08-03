@@ -20,7 +20,7 @@ end
 Dado(/^que tengo un caso llamado "(.*?)"$/) do |nombre_caso|
   @project = Project.create!({
   :name => nombre_caso,
-  :customer_id => 1
+  :user_id => 1
   })
 end
 

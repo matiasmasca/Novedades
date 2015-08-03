@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'my'
   #TO-Do: personalizar los nombres de las rutas.
   #devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
-  
+
   #Para administrar los usuarios
   scope "/admin" do
     resources :users
@@ -14,9 +14,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/contact'
 
-  get 'customers/index'
-
-  get 'notifications/update_project', as: 'update_project'
+  get 'notifications/update_project', as: 'update_project' #Esto era para el Ajax en el select box dinamico.
 
   unauthenticated do
     get 'pages/home'

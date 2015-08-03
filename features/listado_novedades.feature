@@ -7,7 +7,7 @@ Característica: Listado de Novedades
 Antecedentes:
     Dado que estoy logueado como "cliente"
     Dado que tengo 1 caso
-    | name                | customer_id |
+    | name                | user_id |
     | DeRoche vs Argento  | 1           |
     Y estoy en la pantalla "Mis casos"
     Y que este caso tiene 3 novedades
