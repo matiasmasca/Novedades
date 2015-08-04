@@ -61,27 +61,41 @@ class ApplicationController < ActionController::Base
 
     case params[:controller]
        when "projects"
-         project = Project.find_by_id(params[:id]) if params[:id]
-         if project && project.user.id != current_user.id
+         if params[:id]
+           project = Project.find_by_id(params[:id])
+         else
+           project = Project.find_by_user_id(current_user.id) unless current_user.is_admin?
+         end
+         if project && project.user.id == current_user.id && !current_user.is_admin?
+           return true
+         else
            security_exit
            return false
          end
        when "notifications"
          notification = Notification.find_by_id(params[:id]) if params[:id]
-         notification = Notification.find_by_project_id(params[:project_id]) if params[:project_id]
-         if notification && notification.project.user.id != current_user.id
+         if params[:action] == "index"
+           project = Project.find_by_id(params[:project_id])
+           return true if project.user.id == current_user.id && !current_user.is_admin?
+         end
+         if notification && notification.project.user.id == current_user.id
+           return true
+         else
            security_exit
            return false
          end
        when "attachments"
          notification = Notification.find_by_id(params[:notification_id]) if params[:notification_id]
-         if notification && notification.project.user.id != current_user.id
+         if notification && notification.project.user.id == current_user.id
+           return true
+         else
            security_exit
            return false
          end
        else
          #default case
    end
+
    return true
   end
 

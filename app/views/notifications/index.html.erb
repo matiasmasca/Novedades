@@ -1,8 +1,8 @@
 <div class="container-fluid">
 <div class="form-group">
  <h2>Listando Novedades</h2>
- <%= link_to ' Nueva Novedad', new_notification_path, class: "btn btn-primary fa fa-newspaper-o pull-right" unless params[:project_id] || current_user.tipo == 2 %>
- <%= link_to ' Nueva Novedad', new_project_notification_path, title: "Nueva novedad para el caso seleccionado." , class: "btn btn-primary fa fa-folder-o pull-right" if params[:project_id] && current_user.tipo == 1 %>
+ <%= link_to ' Nueva Novedad', new_notification_path, class: "btn btn-primary fa fa-newspaper-o pull-right" unless params[:project_id] || !current_user.is_admin? %>
+ <%= link_to ' Nueva Novedad', new_project_notification_path, title: "Nueva novedad para el caso seleccionado." , class: "btn btn-primary fa fa-folder-o pull-right" if params[:project_id] && current_user.is_admin? %>
 </div>
 <% @project =  Project.find_by_id(params[:project_id]) %>
 <h2><%= @project.name if @project  %></h2>
@@ -24,7 +24,7 @@
         <td><%= notification.date.to_formatted_s(:long) %></td>
         <td></span><%= attachment_badge(notification) %><%= notification.archivos_adjuntos %></span></td>
         <td><%= link_to ' Ver más', project_notification_path(notification.project_id, notification.id), class: "btn btn-default fa fa-share" %>
-        <% if current_user.tipo == 1 %>
+        <% if current_user.is_admin? %>
           <td><%= link_to ' Editar', edit_project_notification_path(notification.project_id,notification.id), class: "btn btn-warning fa fa-pencil", title: 'Editar novedad', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar novedad del caso' }  %></td>
           <td><%= link_to ' Eliminar',  project_notification_path(notification.project_id,notification.id), class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar esta novedad? \n" + notification.title + ""}  %></td>
         <% end %>

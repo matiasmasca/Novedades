@@ -267,7 +267,7 @@ DEPENDENCIES
   mini_magick
   pg
   quiet_assets
-  rails (= 4.2.1)
+  rails
   rails_12factor
   refile!
   sass-rails (~> 5.0)

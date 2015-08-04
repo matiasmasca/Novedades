@@ -11,7 +11,7 @@
 <!--/bienvenida -->
 
 <!--/Admin -->
-<% if user_signed_in? && current_user.tipo == 1  %>
+<% if user_signed_in? && current_user.is_admin?  %>
   <%= render partial: "dashboard"  %>
 <% end %>
 <!--/Admin -->

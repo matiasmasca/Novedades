@@ -1,6 +1,6 @@
 <% if current_user.habilitado? %>
   <div>Bienvenido <strong><%= current_user.nombre %></strong></div>
-  <% if current_user.tipo == 2 %>
+  <% if !current_user.is_admin? %>
     <div> Podes ver tus novedades haciendo click en <%= link_to ' Casos', projects_path, class: "fa fa-book" %> </div>
     <% else %>
     <h3> Usuario Admin. </h3>

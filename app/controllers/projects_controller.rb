@@ -5,8 +5,10 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    if current_user.tipo == 2 #Un cliente
-      @projects = Project.where(user_id: current_user.id)
+    if !current_user.is_admin? #Un cliente
+      #@projects = Project.where(user_id: current_user.id)
+      @projects = current_user.project
+      #raise ''
     else
       @projects = Project.all
     end

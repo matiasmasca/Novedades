@@ -1,7 +1,7 @@
 <div class="container-fluid">
  <div class="form-group">
  <h1>Listando Archivos Adjuntos</h1>
- <%= if params[:notification_id]
+ <%= if params[:notification_id] && current_user.is_admin?
      link_to ' Nuevo adjunto', new_notification_attachment_path, class: "btn btn-primary fa fa-file-o pull-right"
    end
  %>
@@ -27,14 +27,14 @@
             <% end %>
           </td>
           <td><%= link_to ' Ver', notification_attachment_path(attachment.notification_id, attachment), class: "btn btn-default fa fa-share" %></td>
-          <td><%= link_to ' Editar', edit_notification_attachment_path(attachment.notification_id, attachment), class: "btn btn-warning fa fa-pencil", title: 'Editar adjunto', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar adjunto de novedad'} %></td>
-          <td><%= link_to ' Eliminar', attachment, class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar este archivo? \n" + attachment.title + ""}  %></td>
+          <td><%= link_to ' Editar', edit_notification_attachment_path(attachment.notification_id, attachment), class: "btn btn-warning fa fa-pencil", title: 'Editar adjunto', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar adjunto de novedad'}  if current_user.is_admin? %></td>
+          <td><%= link_to ' Eliminar', attachment, class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar este archivo? \n" + attachment.title + ""} if current_user.is_admin? %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 <br>
 <%= link_to 'Volver', :back, class: "btn btn-default" %>
-<%= link_to 'Volver a novedad', notification_path(params[:notification_id]), class: "btn btn-default" if current_user.tipo == 1 && params[:notification_id]%>
+<%= link_to 'Volver a novedad', notification_path(params[:notification_id]), class: "btn btn-default" if current_user.is_admin? && params[:notification_id]%>
 
 </div>

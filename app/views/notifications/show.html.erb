@@ -17,7 +17,7 @@
 
   <hr size="1" />
   <h4 align="left">Adjuntos:</h4>
-  <%  if params[:id] && current_user.tipo == 1 %>
+  <%  if params[:id] && current_user.is_admin? %>
       <%= link_to 'Subir archivo', new_notification_attachment_path(params[:id]), class: "btn btn-primary pull-right" %>
   <% end %>
 
@@ -44,7 +44,7 @@
             </a>
           <!-- /Collap -->
           <%= link_to " Descargar Adjunto", request.base_url + attachment.path, class: "btn btn-lg btn-success fa fa-cloud-download", target: "_black", download: attachment.title  %>
-          <% if current_user.tipo == 1 %>
+          <% if current_user.is_admin? %>
             <%= link_to ' Editar', edit_notification_attachment_path(attachment.notification_id, attachment), class: "btn btn-warning fa fa-pencil", title: 'Editar adjunto', data: { toggle: 'tooltip', placement: 'top', original_title: 'Editar adjunto de novedad'} %>
             <%= link_to ' Eliminar', attachment, class:"btn btn-danger fa fa-trash-o", method: :delete, data: { confirm: "¿Esta seguro que desea borrar este archivo? \n" + attachment.title + ""}  %>
           <% end %>
@@ -74,7 +74,7 @@
   <hr size="1" />
 
 <%= link_to 'Volver', :back, class: "btn btn-default" %>
-<%= link_to 'Edit', edit_notification_path(@notification), class: "btn btn-default" if current_user.tipo == 1 %>
+<%= link_to 'Edit', edit_notification_path(@notification), class: "btn btn-default" if current_user.is_admin? %>
 <div>
 
   <% breadcrumb :notification, @notification %>

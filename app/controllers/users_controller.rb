@@ -2,6 +2,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user , only: [ :index , :show , :edit , :update , :destroy ]
+  before_filter :is_admins
 
   # GET /users
   # GET /users.json
@@ -98,6 +99,17 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit( :email , :nombre , :tipo , :habilitado, :password , :password_confirmation )
+    end
+
+    def is_admin
+      unless current_user.is_admin?
+        respond_to do |format|
+          format.html do
+             redirect_to(root_path, alert: 'Acceso denegado para su usuario.')
+             return false
+          end
+        end
+      end
     end
 
 end

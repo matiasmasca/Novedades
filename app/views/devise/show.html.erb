@@ -20,7 +20,7 @@
 </p>
 
 <% #Si es admini, mostrar los otros datos de Devise. %>
-<% if user_signed_in? && current_user.tipo == 1  %>
+<% if user_signed_in? && current_user.is_admin?  %>
 
 <% end %>
 

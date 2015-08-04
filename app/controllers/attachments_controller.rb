@@ -5,9 +5,8 @@ class AttachmentsController < ApplicationController
   # GET /attachments
   # GET /attachments.json
   def index
-    if current_user.tipo == 2 || ( params[:notification_id] && current_user.tipo == 1) #Un cliente
+    if !current_user.is_admin? || ( params[:notification_id] && current_user.is_admin?) #Un cliente
      @attachments = Attachment.where(notification_id: params[:notification_id]).order('created_at DESC')
-     #raise 'Oops'
    else
      @attachments = Attachment.all.order('created_at DESC')
    end

@@ -3,7 +3,7 @@ ruby '2.2.0' #Versión de Ruby.
 #ruby-gemset=novedades
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails' #, '4.2.1'
 
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'

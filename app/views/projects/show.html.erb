@@ -28,6 +28,6 @@
 
 
 
-<%= link_to 'Editar', edit_project_path(@project), class: "btn btn-default"  if current_user.tipo == 1 %>
+<%= link_to 'Editar', edit_project_path(@project), class: "btn btn-default"  if current_user.is_admin? %>
 <%= link_to 'Volver', :back, class: "btn btn-default"  %>
 <%= link_to 'Lista Casos', projects_path, class: "btn btn-default"  %>
