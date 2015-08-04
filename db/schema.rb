@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20150721954846) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "failed_attempts",        default: 0,    null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.string   "nombre"
@@ -69,5 +72,6 @@ ActiveRecord::Schema.define(version: 20150721954846) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true
 
 end
