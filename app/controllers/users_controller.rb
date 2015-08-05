@@ -2,7 +2,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user , only: [ :index , :show , :edit , :update , :destroy ]
-  before_filter :is_admins
+  before_filter :is_admin
 
   # GET /users
   # GET /users.json

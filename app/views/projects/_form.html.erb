@@ -31,7 +31,6 @@
     <%= f.label :court, 'Juzgado' , class: 'control-label' %><br>
     <select class="form-control" id="select" name="project[court]">
       <option selected="selected" value="<%= @project.court %>"><%= court_name(@project.court.to_i - 1) %></option>
-
       <%= select_court %>
      </select>
   </div>
