@@ -13,23 +13,27 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
- config.action_mailer.default_url_options = { :host => 'localhost:3000' } #para Devise
-
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
 
-  #config.action_mailer.perform_deliveries = true #Para que envie, por defecto es false.
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              ENV['EMAIL_HOST'],
-    port:                 587,
-    domain:               'terciar.ga',
-    user_name:            ENV['EMAIL_USER_NAME'],
-    password:             ENV['EMAIL_USER_PASS'],
-    authentication:       'plain',
-    enable_starttls_auto: true,
-    openssl_verify_mode:  'none'  } #TO-DO: openssl_verify_mode ojo con esto que quita la comprobación del certificado de OpenSSL
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' } #para Devise
+
+   # Don't care if the mailer can't send.
+   config.action_mailer.raise_delivery_errors = true
+   config.action_mailer.perform_deliveries = true
+
+   #config.action_mailer.perform_deliveries = true #Para que envie, por defecto es false.
+   config.action_mailer.delivery_method = :smtp
+   config.action_mailer.smtp_settings = {
+     address:              ENV['EMAIL_HOST'],
+     port:                 587,
+     domain:               'terciar.ga',
+     user_name:            ENV['EMAIL_USER_NAME'],
+     password:             ENV['EMAIL_USER_PASS'],
+     authentication:       'plain',
+     enable_starttls_auto: true,
+     openssl_verify_mode:  'none'  } #TO-DO: openssl_verify_mode ojo con esto que quita la comprobación del certificado de OpenSSL
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
