@@ -24,6 +24,7 @@ end
 
 authenticated do
   get 'pages/dashboard' => 'pages#dashboard'
+  get 'attachments/download' => 'attachments#download'
 end
 
 #resources :projects

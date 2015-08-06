@@ -1,5 +1,5 @@
 class AttachmentsController < ApplicationController
-  before_action :set_attachment, only: [:show, :edit, :update, :destroy]
+  before_action :set_attachment, only: [:show, :edit, :update, :destroy, :download]
   before_action :set_notification, only: [:edit, :new]
 
   # GET /attachments
@@ -67,6 +67,20 @@ class AttachmentsController < ApplicationController
     end
   end
 
+  def download
+    #request.base_url + @attachment.path
+    #url = (request.base_url + Refile.attachment_url(@attachment, :profile_image))
+    url = request.base_url + @attachment.path
+
+    #url = (Refile.store.directory + Refile.attachment_url(@attachment, :profile_image))
+
+    #send_file url, :disposition => 'attachment', url_based_filename: true
+    #send_file url.to_s, filename: @attachment.profile_image_filename, disposition: params.fetch(:disposition, :attachment), type: ::File.extname(request.path)
+    #Refile: issue https://github.com/refile/refile/issues/118
+    send_file Refile.attachment_url(@attachment, :profile_image), type: @attachment.profile_image_content_type, disposition: :attachment
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_attachment
@@ -80,6 +94,6 @@ class AttachmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def attachment_params
-      params.require(:attachment).permit(:title, :notification_id, :profile_image)
+      params.require(:attachment).permit(:id, :title, :notification_id, :profile_image, :remove_profile_image)
     end
 end

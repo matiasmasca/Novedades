@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/refile/refile.git
-  revision: 77ae46c4860a723058450f74ac2dd94bb34b7b41
-  branch: stable-0.5
+  revision: 0dc2072a90020c940102b099387c34297f89b321
+  branch: master
   specs:
     refile (0.5.5)
       mime-types
