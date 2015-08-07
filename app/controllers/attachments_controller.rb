@@ -70,13 +70,12 @@ class AttachmentsController < ApplicationController
   end
 
   def download
-    url = (URI.parse(URI.encode(request.base_url + @attachment.path)))
-  #  send_data filename, filename: "#{@attachment.profile_image_filename}", type: "#{@attachment.profile_image_content_type}", disposition: 'attachment', stream: 'true', buffer_size: '4096'
+    #El send_file falla con esta versión de Refile.
+    #dire = (URI.parse(URI.encode(request.base_url + Refile.attachment_url(@attachment, :profile_image)))).to_s
+    #send_file Refile.attachment_url(@attachment, :profile_image), filename: @attachment.profile_image_filename, type: @attachment.profile_image_content_type, disposition: :attachment
 
-   # Corta el archivo
-   send_data url, filename: @attachment.profile_image_filename, buffer_size: '4096'
-
-
+    file = Refile.store.get(@attachment.profile_image_id).download
+    send_file file, filename: @attachment.profile_image_filename, type: @attachment.profile_image_content_type, disposition: :attachment
   end
 
 
