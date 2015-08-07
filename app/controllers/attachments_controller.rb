@@ -32,7 +32,7 @@ class AttachmentsController < ApplicationController
   # POST /attachments.json
   def create
     @notification = Notification.find(@_params[:attachment][:notification_id].to_i)
-    @attachment = @notification.attachment.build(attachment_params)
+    @attachment = @notification.attachments.build(attachment_params)
 
     respond_to do |format|
       if @attachment.save
