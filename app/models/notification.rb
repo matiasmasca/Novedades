@@ -1,7 +1,7 @@
 class Notification < ActiveRecord::Base
   belongs_to :project, inverse_of: :notifications, autosave: true
 
-  has_many :attachment, inverse_of: :notifications, dependent: :destroy
+  has_many :attachments, inverse_of: :notification, dependent: :destroy
 
   #accepts_attachments_for :attachments, append: true
 
