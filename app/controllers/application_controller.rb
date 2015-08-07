@@ -90,7 +90,6 @@ class ApplicationController < ActionController::Base
          if notification && notification.project.user.id == current_user.id
            return true
          else
-           raise ''
            security_exit
            return false
          end
