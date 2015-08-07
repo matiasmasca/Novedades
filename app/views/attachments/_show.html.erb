@@ -9,9 +9,10 @@
         <% #Esto esta así porque attachment_url de ReFile fallaba. %>
         <%= link_to image_tag(Refile.attachment_url(@attachment, :profile_image), height: '300', width: '300', alt: "#{@attachment.profile_image_filename}"), @attachment.path %>
        <% end %>
-       <strong><%= link_to "Descargar Archivo", request.base_url + @attachment.path, disposition: :attachment %></strong>
+       <strong><%= link_to "Descargar Archivo", request.base_url + @attachment.path, {target: "_blank", download: @attachment.profile_image_filename,  title: "Presione botón derecho y la opción que dice \"Guardar enlace como...\" para descargar el archivo a su computadora.", onclick:"descargarArchivo()", id: "--download"  }  %></strong>
 
        <strong><%= link_to "controller download ", attachments_download_path(id: @attachment.id) %> </strong>
+
 
     <% end %>
   </p>
