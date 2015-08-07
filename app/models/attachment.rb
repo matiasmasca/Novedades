@@ -1,5 +1,5 @@
 class Attachment < ActiveRecord::Base
-  belongs_to :notifications, autosave: true
+  belongs_to :notification, autosave: true
 
   attachment :profile_image, content_type: ["image/jpeg", "image/png", "image/gif", "application/pdf", "application/msword", "application/vnd.oasis.opendocument.text"]
 

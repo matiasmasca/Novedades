@@ -73,7 +73,6 @@ class AttachmentsController < ApplicationController
     #El send_file falla con esta versión de Refile.
     #dire = (URI.parse(URI.encode(request.base_url + Refile.attachment_url(@attachment, :profile_image)))).to_s
     #send_file Refile.attachment_url(@attachment, :profile_image), filename: @attachment.profile_image_filename, type: @attachment.profile_image_content_type, disposition: :attachment
-
     file = Refile.store.get(@attachment.profile_image_id).download
     send_file file, filename: @attachment.profile_image_filename, type: @attachment.profile_image_content_type, disposition: :attachment
   end

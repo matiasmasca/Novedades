@@ -86,9 +86,11 @@ class ApplicationController < ActionController::Base
          end
        when "attachments"
          notification = Notification.find_by_id(params[:notification_id]) if params[:notification_id]
+         notification = Attachment.find_by_id(params[:id]).notification if params[:id]
          if notification && notification.project.user.id == current_user.id
            return true
          else
+           raise ''
            security_exit
            return false
          end
