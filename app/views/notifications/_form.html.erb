@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :project_id, "Caso: ", class: 'control-label' %><br>
+    <%= f.label :project_id, "Proyecto: ", class: 'control-label' %><br>
     <% if params[:project_id] %>
       <div class="form-group">
         <% if @projects %>
@@ -26,7 +26,7 @@
       </div>
     <% else%>
     <%= f.select :project_id, options_for_select(@projects.collect { |project|
-      [project.name, project.user_id] }, 0), {prompt: 'Seleccione un Caso'}, { class: "form-control", id: 'project_select' } %>
+      [project.name, project.user_id] }, 0), {prompt: 'Seleccione un Proyecto'}, { class: "form-control", id: 'project_select' } %>
     <% end %>
     <hr size="1" />
   </div>

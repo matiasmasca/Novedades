@@ -15,7 +15,7 @@
     <% if params[:notification_id] %>
       <div class="form-group">
         <%= @notification.title %>
-        <br> <h4>Del caso:</h4>
+        <br> <h4>Del Proyecto:</h4>
         <%= @notification.project.name %>
         <%= f.hidden_field :notification_id, value: params[:notification_id], class: 'form-control' %>
       </div>

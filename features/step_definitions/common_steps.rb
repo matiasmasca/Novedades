@@ -7,7 +7,7 @@ end
 
 Dado(/^(?:estoy en la pantalla|estoy en la pantalla donde veo|que estoy en la pantalla de)? "(.*?)"$/) do |pantalla|
   case pantalla
-  when 'Mis casos'
+  when 'Mis proyectos'
     visit('/projects')
   when 'las novedades'
     visit('/notifications')
@@ -17,9 +17,9 @@ Dado(/^(?:estoy en la pantalla|estoy en la pantalla donde veo|que estoy en la pa
 end
 
 #De Ver novedades.
-Dado(/^que tengo un caso llamado "(.*?)"$/) do |nombre_caso|
+Dado(/^que tengo un proyecto llamado "(.*?)"$/) do |nombre_proyecto|
   @project = Project.create!({
-  :name => nombre_caso,
+  :name => nombre_proyecto,
   :user_id => 1
   })
 end

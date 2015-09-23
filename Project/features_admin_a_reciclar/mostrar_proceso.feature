@@ -16,7 +16,7 @@ Escenario: mostrar premio
   Cuando hago click en Mostrar para "Premios ACME 2014"
   Entonces veo toda la información del premio.
 
-#Casos extremos.
+#Proyectos extremos.
 #@to-do
 #El proceso no existe.
 #por ejemplo Ingresa un ID que no existe en la url.

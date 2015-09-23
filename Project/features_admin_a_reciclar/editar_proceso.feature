@@ -22,7 +22,7 @@ Escenario: agrego dato que faltaba
   Y cambio el duracion por "30"
   Entonces veo que la duración cambio, sin afectar a nombre o lugar.
 
-#Casos extremos
+#Proyectos extremos
 Esquema del escenario: problemas con datos obligatorios
   Dado existe una Organización: "Nerv Corp.", "Nueva nueva tokio", "" y "eva01@nerv.com"
   Dado existe un premio llamado "Premios ACME43" que se realizara en "Av. Siempre Viva 742"

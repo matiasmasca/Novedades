@@ -3,7 +3,7 @@ crumb :root do
 end
 
  crumb :projects do
-   link "Casos", projects_path
+   link "Proyectos", projects_path
  end
 
  crumb :project do |project|
