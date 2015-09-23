@@ -34,7 +34,7 @@ Escenario: tiene el mismo contenido
    | Premio Roberto     | Av. Siempre Viva 742                  | 90      |||||
    | Miss Galaxia       | Planeta alfacentauris Av. Galaxy 2304 | 350     |||||
 
-#Casos Extremos.
+#Proyectos Extremos.
 Escenario: no tiene procesos creados.
   Dado que no he creado ningún proceso de selección
   Y que estoy en la pantalla de mis procesos electorales

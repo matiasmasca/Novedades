@@ -1,7 +1,7 @@
 # language: es
 Característica: Indentificacion clientes
     Como un cliente del estudio
-    Para poder ver las novedades de mis casos
+    Para poder ver las novedades de mis Proyectos
     Deseo identificarme en la aplicación de clientes del estudio
 
 Antecedentes:

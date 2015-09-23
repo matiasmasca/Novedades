@@ -18,22 +18,11 @@
 
 
   <div class="form-group">
-    <%= f.label :name, 'Carátula Caso: ', class: 'control-label' %><br>
-    <%= f.text_field :name, placeholder: "ingrese la carátula del caso." , class: 'form-control' %>
+    <%= f.label :name, 'Nombre Proyecto: ', class: 'control-label' %><br>
+    <%= f.text_field :name, placeholder: "ingrese nombre del proyecto." , class: 'form-control' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :judicial_record_number, 'Expediente N°', class: 'control-label' %><br>
-    <%= f.text_field :judicial_record_number, class: 'form-control' %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :court, 'Juzgado' , class: 'control-label' %><br>
-    <select class="form-control" id="select" name="project[court]">
-      <option selected="selected" value="<%= @project.court %>"><%= court_name(@project.court.to_i - 1) %></option>
-      <%= select_court %>
-     </select>
-  </div>
   <div class="form-group">
   <div class="actions">
     <%= f.submit 'Guardar', class: 'btn btn-primary' %>

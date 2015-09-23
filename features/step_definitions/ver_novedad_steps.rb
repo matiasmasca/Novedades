@@ -1,10 +1,10 @@
 # encoding: utf-8
-Dado(/^que he seleccionado el caso "(.*?)"$/) do |nombre_caso|
-  step %{que tengo un caso llamado "#{nombre_caso}"}
-  step %{estoy en la pantalla donde veo "Mis casos"}
-  step %{que el caso tiene 1 novedad}, table(%{
+Dado(/^que he seleccionado el proyecto "(.*?)"$/) do |nombre_proyecto|
+  step %{que tengo un proyecto llamado "#{nombre_proyecto}"}
+  step %{estoy en la pantalla donde veo "Mis proyectos"}
+  step %{que el proyecto tiene 1 novedad}, table(%{
    | title                     | message                                     | project_id | date       |
-   | Resolución Juez Barubudia | La jueza Barubudia dio resolución favorable | 1          | 01/09/2014 |
+   | Mockups disponibles | Puede ver y validar los bosquejos de la interfaz grafica | 1          | 01/09/2014 |
   })
   step %{seleccionó "Ver novedades"}
 
@@ -15,7 +15,7 @@ Dado(/^que he seleccionado la novedad "(.*?)"$/) do |arg1|
 end
 
 Entonces(/^veo el titulo "(.*?)"$/) do |titulo|
-  step %{veo un mensaje "#{titulo}"}
+   step %{veo un mensaje "#{titulo}"}
 end
 
 Entonces(/^el mensaje "(.*?)"$/) do |mensaje|

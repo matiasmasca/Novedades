@@ -1,10 +1,10 @@
 ***Novedades***
 ===
-Repositorio para la edición comunitaria (software libre) de "Novedades", una aplicación web para mantener informados a sus clientes sobre las novedades que hay en sus casos/proyectos.
+Repositorio para la edición comunitaria (software libre) de "Novedades", una aplicación web para mantener informados a sus clientes sobre las novedades que hay en sus Proyectos/proyectos.
 
 Es desarrollada con Ruby on Rails.
 
-El alcance del proyecto es: sus clientes se identifican y ven un listado de casos con un indicador de novedades para cada caso. Al seleccionar un caso acceden al listado de novedades y seleccionan una novedad para ver su contenido. Cada novedad puede tener varios archivos adjuntos. Cuando se crea una novedad se le envía un email al cliente invitándolo a conectarse al sistema para ver de que se trata.
+El alcance del proyecto es: sus clientes se identifican y ven un listado de Proyectos con un indicador de novedades para cada Proyecto. Al seleccionar un Proyecto acceden al listado de novedades y seleccionan una novedad para ver su contenido. Cada novedad puede tener varios archivos adjuntos. Cuando se crea una novedad se le envía un email al cliente invitándolo a conectarse al sistema para ver de que se trata.
 
 **El Origen.**
 Encargado por un cliente en particular, trantando de convencerlo de hacerlo como Software Libre.

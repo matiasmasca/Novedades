@@ -1,7 +1,7 @@
 <% if current_user.habilitado? %>
   <div>Bienvenido <strong><%= current_user.nombre %></strong></div>
   <% if !current_user.is_admin? %>
-    <div> Podes ver tus novedades haciendo click en <%= link_to ' Casos', projects_path, class: "fa fa-book" %> </div>
+    <div> Podes ver tus novedades haciendo click en <%= link_to ' Proyectos', projects_path, class: "fa fa-book" %> </div>
     <% else %>
     <h3> Usuario Admin. </h3>
   <% end %>
@@ -10,5 +10,5 @@
   <div><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></div>
 
 <% else %>
-  <div>Su usuario ha sido deshabilitado, por favor comuniquese con el Dr. Cosme Fulanito (mail@mail.com)</div>
+  <div>Su usuario ha sido deshabilitado, por favor comuniquese con el Sr. Cosme Fulanito (comercial@terciar.info)</div>
 <% end %>

@@ -6,20 +6,9 @@
 </p>
 
 <p>
-  <strong>Carátula Caso:</strong>
+  <strong>Nombre del Proyecto:</strong>
   <%= @project.name %>
 </p>
-
-<p>
-  <strong>Expediente N°:</strong>
-  <%= @project.judicial_record_number %>
-</p>
-
-<p>
-  <strong>Juzgado N°:</strong>
-  <%= court_name(@project.court) %>
-</p>
-
 
 <p>
   <strong>Última actualización:</strong>
@@ -30,4 +19,4 @@
 
 <%= link_to 'Editar', edit_project_path(@project), class: "btn btn-default"  if current_user.is_admin? %>
 <%= link_to 'Volver', :back, class: "btn btn-default"  %>
-<%= link_to 'Lista Casos', projects_path, class: "btn btn-default"  %>
+<%= link_to 'Lista Poryectos', projects_path, class: "btn btn-default"  %>

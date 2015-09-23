@@ -6,7 +6,7 @@ class NotificationMailer < ApplicationMailer
     @project = project
     @notification = @project.notifications.last
     @url  = "http://terciar-novedades.herokuapp.com/projects/#{@project.id}/notifications/#{@notification.id}"
-    mail(to: @customer.email, subject: 'Tiene una novedad en su caso')
+    mail(to: @customer.email, subject: 'Tiene una novedad en su Proyecto')
   end
 
 end

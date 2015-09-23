@@ -22,7 +22,7 @@ Escenario: crear premio
   Cuando presiono el botón "Guardar cambios"
   Entonces se crea el premio y me muestra el mensaje "Premio creado correctamente"
 
-#Casos extremos
+#Proyectos extremos
 Escenario: se olvido un dato
   Y dejo en blanco Nombre
   Y dejo en blanco Lugar
@@ -78,7 +78,7 @@ Escenario: Premio repetido, Oscar y oscar.
 # Organizador: entidad a la que pertenece el usuario. El premio debe estar asociado a la Organización a la que pertenece el usuario.
 
 #-- Sobre este archivo.--
-#Esta fue mi Primera experiencia de llevar a la practica lo estudiado sobre Cucumber y BDD sobre un caso real e independiente a los estudiadios. Son muchas las mejoras que se pueden hacer a los mismos, sobre todo DRY.
+#Esta fue mi Primera experiencia de llevar a la practica lo estudiado sobre Cucumber y BDD sobre un Proyecto real e independiente a los estudiadios. Son muchas las mejoras que se pueden hacer a los mismos, sobre todo DRY.
 
 #Se modifico un poco al integrar Devise. Agregando el antecendete para quitar algunos duplicados:
 #Antecedentes:

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721954846) do
+ActiveRecord::Schema.define(version: 20150721204846) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "profile_image_id"
@@ -41,10 +41,8 @@ ActiveRecord::Schema.define(version: 20150721954846) do
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
-    t.string   "judicial_record_number", default: "EXP.N° "
-    t.integer  "court",                  default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"

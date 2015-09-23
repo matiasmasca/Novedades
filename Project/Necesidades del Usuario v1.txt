@@ -1,10 +1,10 @@
-X * Login cliente: el cliente se identifica en el sistema para ver las novedades de sus casos (o proyectos).
-* Un cliente tiene varios casos (aunque generalmente sea 1 o 2), cada caso/proyecto tiene un listado novedades ordenadas cronológicamente.
+X * Login cliente: el cliente se identifica en el sistema para ver las novedades de sus Proyectos (o proyectos).
+* Un cliente tiene varios Proyectos (aunque generalmente sea 1 o 2), cada Proyecto/proyecto tiene un listado novedades ordenadas cronológicamente.
 * Una novedad tiene un texto breve y puede tener un archivo adjunto (imagen, pdf o word).
-** Opcional: en el caso de las imágenes procesarlas para que ocupen menos espacio en el servidor.
+** Opcional: en el Proyecto de las imágenes procesarlas para que ocupen menos espacio en el servidor.
 
 * El Administrador se identifica:
-- El Admin puede seleccionar un cliente, luego selecciona un caso y puede agregar una novedad para ese caso.
+- El Admin puede seleccionar un cliente, luego selecciona un Proyecto y puede agregar una novedad para ese Proyecto.
 - Para una novedad, el Admin. puede agregar "Archivos Adjuntos" como imagenes, pdf o .docx
 - El Admin puede habilitar o deshabilitar un cliente.
 -
@@ -13,7 +13,7 @@ X * Login cliente: el cliente se identifica en el sistema para ver las novedades
 Funcionalidades detectadas:
 - Admin. Clientes. CRUD.
 	-- El cliente puede estar "deshabilitado".
-- Admin. Casos. CRUD.
+- Admin. Proyectos. CRUD.
 - Admin. Novedades. CRUD.
 - Agregar Opción de Novedades al menú al Admin.
 
@@ -22,7 +22,7 @@ X - Login cliente.
 	-- Wiget para sitio web.
 	-- mail y contraseña.
 X	-- Ve un mensaje cuando esta deshabilitado: "Su usuario ha sido deshabilitado, por favor comuniquese con X Cosme Fulanito (mail@mail)."
-X- Clientes. Listado Casos.
+X- Clientes. Listado Proyectos.
 X	-- Indicando cuales tienen novedades.
 X- Clientes. Listado Novedades.
 X	-- Ordenadas de la más reciente a la más antigua.
