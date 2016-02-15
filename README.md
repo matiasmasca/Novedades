@@ -1,3 +1,4 @@
+[![Beerpay](http://test.beerpay.io/matiasmasca/Novedades/badge.svg?style=flat-square)](http://test.beerpay.io/matiasmasca/Novedades)
 ***Novedades***
 ===
 Repositorio para la edición comunitaria (software libre) de "Novedades", una aplicación web para mantener informados a sus clientes sobre las novedades que hay en sus Proyectos/proyectos.
