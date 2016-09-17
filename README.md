@@ -133,3 +133,5 @@ Licencia:
     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
+jugando en la dev party
+solucionando un pull request conflictivo por falta de actualizacion
